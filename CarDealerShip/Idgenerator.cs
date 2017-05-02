@@ -18,7 +18,7 @@ namespace CarDealerShip
         public static int GenerateIdChef()
         {
             int value = _ID.Next(2000, 2999);
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 1000; i++)
           {
                 if (_IDList.Contains(value))
                 {
@@ -29,7 +29,7 @@ namespace CarDealerShip
                 else
                 {
                  _IDList.Add(value);
-                 break;
+                 return value;
                 }
           }
             
@@ -39,7 +39,7 @@ namespace CarDealerShip
         public static int GenerateIdSælger()
         {
             int value = _ID.Next(1000, 1999);
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 if (_IDList.Contains(value))
                 {
@@ -50,7 +50,7 @@ namespace CarDealerShip
                 else
                 {
                     _IDList.Add(value);
-                    break;
+                    return value;
                 }
             }
 
