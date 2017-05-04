@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip
 {
-    class Chef
-    {asdb ashbd
+    class Chef : Medarbejder
+    {
+        public Chef(string Navn, string Password) : base(Navn, Password)
+        { }
     }
 }
