@@ -92,17 +92,17 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Medarbejder.cs" />
+    <Compile Include="DomainLayer\Medarbejder.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Chef.cs" />
-    <Compile Include="IdGenerator.cs" />
-    <Compile Include="Login.cs" />
+    <Compile Include="DomainLayer\Chef.cs" />
+    <Compile Include="DomainLayer\IdGenerator.cs" />
+    <Compile Include="DomainLayer\Login.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MedarbejderKatalog.cs" />
+    <Compile Include="DomainLayer\MedarbejderKatalog.cs" />
     <Compile Include="View\OpretBilView.xaml.cs">
       <DependentUpon>OpretBilView.xaml</DependentUpon>
     </Compile>
@@ -112,9 +112,9 @@
     <Compile Include="View\OpretSælgerView.xaml.cs">
       <DependentUpon>OpretSælgerView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Person.cs" />
+    <Compile Include="DomainLayer\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provision.cs" />
+    <Compile Include="DomainLayer\Provision.cs" />
     <Compile Include="View\SaleBekræftSalgView.xaml.cs">
       <DependentUpon>SaleBekræftSalgView.xaml</DependentUpon>
     </Compile>
@@ -124,7 +124,7 @@
     <Compile Include="View\SaleVælgKundeView.xaml.cs">
       <DependentUpon>SaleVælgKundeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Sælger.cs" />
+    <Compile Include="DomainLayer\Sælger.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -180,7 +180,6 @@
     <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DomainLayer\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
