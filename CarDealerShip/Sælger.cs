@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip
 {
-    class Sælger
+    class Sælger : Medarbejder
     {
+        public Sælger (string Navn, string Password) : base(Navn, Password)
+        { }
     }
 }
