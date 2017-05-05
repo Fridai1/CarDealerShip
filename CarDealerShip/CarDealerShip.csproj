@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="DomainLayer\Chef.cs" />
     <Compile Include="DomainLayer\IdGenerator.cs" />
+    <Compile Include="DomainLayer\Kunde.cs" />
     <Compile Include="ViewModel\Login.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
