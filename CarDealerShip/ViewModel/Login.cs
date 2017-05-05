@@ -6,10 +6,10 @@
 
         private bool LoginForsøg(int ID, string Password)
         {
-            if (MedarbejderKatalog.contains(ID))
+            if (MedarbejderKatalog<Medarbejder>.)
             {
 
-                if (MedarbejderKatalog.ID.Password == Password)
+                if (true)
                 {
 
                     return _succeslogin = true;
