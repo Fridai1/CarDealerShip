@@ -11,7 +11,7 @@ namespace CarDealerShip
             _kundes = new List<Kunde>();
         }
 
-        public void AddKunde(Kunde aKunde)
+        public void AddKunde(Kunde aKunde) //test
         {
             _kundes.Add(aKunde);
         }
