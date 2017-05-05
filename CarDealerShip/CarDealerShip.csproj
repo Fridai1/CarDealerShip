@@ -92,6 +92,8 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainLayer\Bil.cs" />
+    <Compile Include="DomainLayer\BilKatalog.cs" />
     <Compile Include="DomainLayer\Medarbejder.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
