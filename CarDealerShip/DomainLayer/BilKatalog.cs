@@ -6,18 +6,24 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip
 {
-    static class BilKatalog
+    public class BilKatalog
     {
-        static Dictionary<int, Bil> Katalog = new Dictionary<int, Bil>();
+        private Dictionary<long, Bil> _BilKatalog;
 
-        static void OpretBil(Bil bil)
+        public BilKatalog()
         {
-            Katalog.Add(bil.StelNr, bil);
+            _BilKatalog = new Dictionary<long, Bil>();
+        }
+      
+
+        public void OpretBil(Bil bil)
+        {
+            BilKatalog.Add(bil.StelNr, bil);
         }
 
-        static void DeleteBil(int StelNr)
+        public void DeleteBil(int StelNr)
         {
-            Katalog.Remove(StelNr);
+            BilKatalog.Remove(StelNr);
         }
     }
 }

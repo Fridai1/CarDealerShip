@@ -8,9 +8,10 @@ namespace CarDealerShip
 {
     class Bil
     {
+        private string _farve;
         public Bil(string farve, int stelNr, bool ny, double motorStr, string type, double price, string fabrikant, string model)
         {
-            Farve = farve;
+            _farve = farve;
             StelNr = stelNr;
             Ny = ny;
             MotorStr = motorStr;
@@ -20,7 +21,11 @@ namespace CarDealerShip
             Model = model;
         }
 
-        public string Farve;
+        public string Farve
+        {
+            get { return _farve; }
+            set { _farve = value; }
+        }
         public int StelNr;
         public bool Ny;
         public double MotorStr;
@@ -28,5 +33,7 @@ namespace CarDealerShip
         public double Price;
         public string Fabrikant;
         public string Model;
+
+        
     }
 }
