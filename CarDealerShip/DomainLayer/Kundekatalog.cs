@@ -11,12 +11,12 @@ namespace CarDealerShip
             _kundes = new List<Kunde>();
         }
 
-        public void AddKunde(Kunde aKunde)
+        public void AddKunde(Kunde aKunde) //tilføj kunde
         {
             _kundes.Add(aKunde);
         }
 
-        public Kunde GetKunde(long telefon)
+        public Kunde GetKunde(long telefon) //find kunde med bestemt telefonnummer
         {
             Kunde x;
             x = null;
@@ -29,7 +29,7 @@ namespace CarDealerShip
             return x;
         }
 
-        public void Delete(Kunde aKunde)
+        public void Delete(Kunde aKunde) //slet kunde
         {
             _kundes.Remove(aKunde);
         }
