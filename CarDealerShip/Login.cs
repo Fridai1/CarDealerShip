@@ -6,7 +6,7 @@
 
         private bool LoginForsøg(int ID, string Password)
         {
-            if (MedarbejderKatalog.contains(ID))
+            if (MedarbejderKatalog.Contains(ID))
             {
 
                 if (MedarbejderKatalog.ID.Password == Password)
