@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip
 {
-    class Bil
+    public class Bil
     {
-        public Bil(string farve, int stelNr, bool ny, double motorStr, string type, double price, string fabrikant, string model)
+        private string _farve;
+        private long _stelNr;
+        private bool _ny;
+        private double _motorStr;
+        private string _type;
+        private double _price;
+        private string _fabrikant;
+        private string _model;
+
+        public Bil(string farve, long stelNr, bool ny, double motorStr, string type, double price, string fabrikant, string model)
         {
             _farve = farve;
             _stelNr = stelNr;
@@ -20,48 +29,52 @@ namespace CarDealerShip
             _model = model;
         }
 
-        public string _farve
+        public string Farve
         {
             get { return _farve; }
             set { _farve = value; }
         }
-        public int _stelNr
+        
+        public long StelNr
         {
             get { return _stelNr; }
             set { _stelNr = value; }
         }
-        public bool _ny
+
+        public bool Ny
         {
             get { return _ny; }
             set { _ny = value; }
         }
-        public double _motorStr
+
+        public double MotorStr
         {
             get { return _motorStr; }
             set { _motorStr = value; }
         }
-        public string _type
+
+        public string Type
         {
             get { return _type; }
             set { _type = value; }
         }
-        public double _price
+
+        public double Price
         {
             get { return _price; }
             set { _price = value; }
         }
-        public string _fabrikant
+
+        public string Fabrikant
         {
             get { return _fabrikant; }
             set { _fabrikant = value; }
-
         }
-        public string _model
+
+        public string Model
         {
             get { return _model; }
             set { _model = value; }
         }
-
-        
     }
 }

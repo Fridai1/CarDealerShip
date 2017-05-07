@@ -8,22 +8,42 @@ namespace CarDealerShip
 {
     public class BilKatalog
     {
-        private Dictionary<long, Bil> _BilKatalog;
+        private List<Bil> _bilkatalog;
 
         public BilKatalog()
         {
-            _BilKatalog = new Dictionary<long, Bil>();
+            _bilkatalog = new List<Bil>();
         }
       
+        public Bil GetBil(long stelNr)
+        {
+            foreach(Bil b in _bilkatalog)
+            {
+                if (b.StelNr == stelNr)
+                {
+                    return b;
+                }
+            }
+
+            return null;
+        }
 
         public void OpretBil(Bil bil)
         {
-            BilKatalog.Add(bil.StelNr, bil);
+            _bilkatalog.Add(bil);
+
         }
 
-        public void DeleteBil(int StelNr)
+        public void DeleteBil(long stelNr)
         {
-            BilKatalog.Remove(StelNr);
+            foreach(Bil bil in _bilkatalog)
+            {
+                if (bil.StelNr == stelNr)
+                {
+                    _bilkatalog.Remove(bil);
+                    break;
+                }
+            }
         }
     }
 }
