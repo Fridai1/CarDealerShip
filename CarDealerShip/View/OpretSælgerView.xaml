@@ -33,10 +33,13 @@
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal"/>
             <StackPanel Height="98" Orientation="Horizontal"/>
-            <Button x:Name="button" Content="Submit" HorizontalAlignment="Stretch" Height="75" Margin="340,100,340,0" VerticalAlignment="Stretch" Width="250" FontSize="36"/>
         </StackPanel>
         <StackPanel Margin="0,98,10,10" Background="#FF858585" HorizontalAlignment="Right" Width="937" d:LayoutOverrides="TopPosition, BottomPosition">
             <ListView x:Name="listView" Background="White" BorderThickness="0" Margin="20,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887"/>
+        </StackPanel>
+        <StackPanel Height="230" Margin="10,0,0,164" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="923">
+            <Button x:Name="submitButton" Content="Submit" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition"/>
+            <Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" Click="backToMenuButton_Click"/>
         </StackPanel>
 
     </Grid>
