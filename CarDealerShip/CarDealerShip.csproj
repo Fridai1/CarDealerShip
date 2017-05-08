@@ -101,6 +101,9 @@
     <Compile Include="DomainLayer\IdGenerator.cs" />
     <Compile Include="DomainLayer\Kunde.cs" />
     <Compile Include="DomainLayer\Kundekatalog.cs" />
+    <Compile Include="View\ProvisionView.xaml.cs">
+      <DependentUpon>ProvisionView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Login.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -152,6 +155,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ProvisionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\OpretBilView.xaml">
       <SubType>Designer</SubType>
