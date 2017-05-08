@@ -14,7 +14,7 @@
                 <Run Text="Dealership"/>
             </TextBlock>
         </StackPanel>
-        <StackPanel Margin="352,364,362,0" Height="368" VerticalAlignment="Top" IsHoldingEnabled="False" Orientation="Horizontal" d:LayoutOverrides="LeftPosition, RightPosition">
+        <StackPanel Margin="221,364,215,0" Height="368" VerticalAlignment="Top" IsHoldingEnabled="False" Orientation="Horizontal" d:LayoutOverrides="LeftPosition, RightPosition">
             <StackPanel Width="300">
                 <Button x:Name="opretNyBil" Content="Opret Ny Bil" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ClickMode="Press" ToolTipService.ToolTip="Gå til siden &quot;Opret Ny Bil&quot;" Click="opretNyBil_Click"/>
                 <StackPanel Height="100"/>
@@ -29,6 +29,10 @@
             </StackPanel>
             <StackPanel Width="300" d:LayoutOverrides="TopPosition, BottomPosition">
                 <Button x:Name="opretSalg" Content="Opret Et Salg" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ClickMode="Press" ToolTipService.ToolTip="Gå til siden &quot;Opret Nyt Salg&quot;" Click="opretNytSalg_Click"/>
+                <StackPanel Height="100"/>
+            </StackPanel>
+            <StackPanel Width="300">
+                <Button x:Name="Provision" Content="Provision" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ClickMode="Press" ToolTipService.ToolTip="Gå til siden &quot;Provison&quot;" Click="seProvision_Click"/>
                 <StackPanel Height="100"/>
             </StackPanel>
         </StackPanel>

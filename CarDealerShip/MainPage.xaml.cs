@@ -46,5 +46,10 @@ namespace CarDealerShip
         {
             this.Frame.Navigate(typeof(CarDealerShip.SaleVælgBilView));
         }
+
+        private void seProvision_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CarDealerShip.ProvisionView));
+        }
     }
 }
