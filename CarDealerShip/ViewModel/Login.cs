@@ -2,26 +2,27 @@
 {
     public class Login
     {
-        private bool _succeslogin;
 
-        private bool LoginForsøg(int ID, string Password)
-        {
-            if (MedarbejderKatalog<Medarbejder>.)
-            {
+        //private bool _succeslogin;
 
-                if (true)
-                {
+        //private bool LoginForsøg(int ID, string Password)
+        //{
+        //    if (MedarbejderKatalog<Medarbejder>.)
+        //    {
 
-                    return _succeslogin = true;
-                }
+        //        if (true)
+        //        {
+
+        //            return _succeslogin = true;
+        //        }
                
-            }
+        //    }
 
-            else
-            {
-                return _succeslogin = false;
-            }
+        //    else
+        //    {
+        //        return _succeslogin = false;
+        //    }
            
-        }
+        //}
     }
 }

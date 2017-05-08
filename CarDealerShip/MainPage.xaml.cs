@@ -26,5 +26,25 @@ namespace CarDealerShip
         {
             this.InitializeComponent();
         }
+       
+        private void opretNyBil_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CarDealerShip.OpretBilView));
+        }
+
+        private void opretNyKunde_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CarDealerShip.OpretKundeView));
+        }
+
+        private void opretNySælger_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CarDealerShip.OpretSælgerView));
+        }
+
+        private void opretNytSalg_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CarDealerShip.SaleVælgBilView));
+        }
     }
 }

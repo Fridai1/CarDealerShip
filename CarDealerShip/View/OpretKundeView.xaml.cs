@@ -26,5 +26,10 @@ namespace CarDealerShip
         {
             this.InitializeComponent();
         }
+
+        private void submitButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

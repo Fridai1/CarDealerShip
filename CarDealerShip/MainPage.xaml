@@ -16,19 +16,19 @@
         </StackPanel>
         <StackPanel Margin="352,364,362,0" Height="368" VerticalAlignment="Top" IsHoldingEnabled="False" Orientation="Horizontal" d:LayoutOverrides="LeftPosition, RightPosition">
             <StackPanel Width="300">
-                <Button x:Name="opretNyBil" Content="Opret Ny Bil" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ClickMode="Press" ToolTipService.ToolTip="Gå til siden &quot;Opret Ny Bil&quot;" Click="opretNyBil_Click_1"/>
+                <Button x:Name="opretNyBil" Content="Opret Ny Bil" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ClickMode="Press" ToolTipService.ToolTip="Gå til siden &quot;Opret Ny Bil&quot;" Click="opretNyBil_Click"/>
                 <StackPanel Height="100"/>
             </StackPanel>
             <StackPanel Width="300">
-                <Button x:Name="opretNyKunde" Content="Opret Kunde" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ToolTipService.ToolTip="Gå til siden &quot;Opret Kunde&quot;" Click="opretNyBil1_Click"/>
+                <Button x:Name="opretNyKunde" Content="Opret Kunde" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ToolTipService.ToolTip="Gå til siden &quot;Opret Kunde&quot;" Click="opretNyKunde_Click"/>
                 <StackPanel Height="100"/>
             </StackPanel>
             <StackPanel Width="300">
-                <Button x:Name="opretNySælger" Content="Opret Sælger" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ToolTipService.ToolTip="Gå til siden &quot;Opret Sælger&quot;" Click="opretNyBil2_Click"/>
+                <Button x:Name="opretNySælger" Content="Opret Sælger" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ToolTipService.ToolTip="Gå til siden &quot;Opret Sælger&quot;" Click="opretNySælger_Click"/>
                 <StackPanel Height="100"/>
             </StackPanel>
             <StackPanel Width="300" d:LayoutOverrides="TopPosition, BottomPosition">
-                <Button x:Name="opretSalg" Content="Opret Et Salg" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ClickMode="Press" ToolTipService.ToolTip="Gå til siden &quot;Opret Ny Bil&quot;" Click="opretNyBil_Click_1"/>
+                <Button x:Name="opretSalg" Content="Opret Et Salg" HorizontalAlignment="Stretch" Height="110" Margin="35,20,35,5" VerticalAlignment="Stretch" FontSize="24" FontFamily="Arial Black" Foreground="#FF0C00FF" ClickMode="Press" ToolTipService.ToolTip="Gå til siden &quot;Opret Nyt Salg&quot;" Click="opretNytSalg_Click"/>
                 <StackPanel Height="100"/>
             </StackPanel>
         </StackPanel>

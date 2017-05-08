@@ -47,7 +47,7 @@
             <ListView x:Name="listView" Background="White" BorderThickness="0" Margin="20,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887"/>
         </StackPanel>
         <StackPanel Height="230" Margin="10,0,0,164" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="923">
-            <Button x:Name="submitButton" Content="Submit" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition"/>
+            <Button x:Name="submitButton" Content="Submit" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition" Click="submitButton_Click"/>
             <Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" Click="backToMenuButton_Click"/>
         </StackPanel>
 
