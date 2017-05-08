@@ -9,28 +9,6 @@
             
         }
 
-        public string name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public string adresse
-        {
-            get { return adresse; }
-            set { adresse = value; }
-        }
-
-        public string email
-        {
-            get { return email; }
-            set { email = value; }
-        }
-
-        public long telefon
-        {
-            get { return telefon; }
-            set { telefon = value; }
-        }
+        
     }
 }

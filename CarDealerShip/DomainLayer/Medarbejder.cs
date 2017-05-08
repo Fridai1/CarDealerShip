@@ -24,7 +24,7 @@ namespace CarDealerShip
             set { _password = value; }
         }
 
-        public Medarbejder (string Navn, string Password) : base(Navn)
+        public Medarbejder (string Navn, string Password, string adresse, long TelefonNummer, string Email) : base(Navn, Email, adresse, TelefonNummer)
         {
             _id = IdGenerator.GenerateIdChef();
             _password = Password; 

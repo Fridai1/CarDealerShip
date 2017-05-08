@@ -20,9 +20,9 @@ namespace CarDealerShip
         {
             Kunde x;
             x = null;
-            foreach (var y in _kundes)
+            foreach (Kunde y in _kundes)
             {
-                if (y.telefon == telefon) x = y;
+                if (y.TelefonNummer == telefon) x = y;
 
 
             }
