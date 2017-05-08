@@ -98,7 +98,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DomainLayer\Chef.cs" />
     <Compile Include="DomainLayer\IdGenerator.cs" />
     <Compile Include="DomainLayer\Kunde.cs" />
     <Compile Include="DomainLayer\Kundekatalog.cs" />
@@ -128,7 +127,6 @@
     <Compile Include="View\SaleVælgKundeView.xaml.cs">
       <DependentUpon>SaleVælgKundeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DomainLayer\Sælger.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

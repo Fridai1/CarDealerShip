@@ -30,12 +30,7 @@ namespace CarDealerShip
             {
                 value = 3;
             }
-            
 
-
-            
-            
-            
 
             
             switch (value)

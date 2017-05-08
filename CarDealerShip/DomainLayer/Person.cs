@@ -23,13 +23,13 @@ namespace CarDealerShip
         public string Addresse
         {
             get { return _addresse; }
-            set { Addresse = value; }
+            set { _addresse = value; }
         }
 
         public string Email
         {
             get { return _email; }
-            set { Email = value; }
+            set { _email = value; }
         }
 
         public long TelefonNummer
@@ -38,10 +38,7 @@ namespace CarDealerShip
             set { _telofonNummer = value; }
         }
 
-        public Person(string Navn) //ansat konstrokter 
-        {
-            _navn = Navn;
-        }
+        
 
         public Person(string Navn, string Addresse, string Email, long TelefonNummer) //kunde kon
         {
