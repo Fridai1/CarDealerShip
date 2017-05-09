@@ -6,51 +6,72 @@ namespace CarDealerShip
     public class Provision
     {
         private double _Provision;
-        private double _solgt;
 
-        public Provision()
+        private int _value;
+        private int _id;
+        private double _solgt;
+        public Provision(int id)
         {
             double _provision = 0;
-            double solgt = 100000;
+
+            _value = 0;
+            _id = id;
+            _solgt = SalgKatalog.GetSalg(_id).Price;
+
+
+
+
+
+
         }
 
         public void provision()
         {
-            int value = 5;
 
-            if (Sælger.solgt >= 100000)
+
+            if (_solgt >= 1 || _solgt <= 99999)
             {
-                value = 1;
+                _Provision = _solgt * 1.05;
+                //_value = 1;
             }
-            else if (Sælger.solgt >= 200000)
+            else if (_solgt >= 100000 || _solgt < 200000)
             {
-                value = 2;
+                //_value = 2;
+                _Provision = _solgt * 1.05;
             }
-            else if (Sælger.solgt >201000)
+            else if (_solgt > 200000)
             {
-                value = 3;
+                //_value = 3;
+                _Provision = _solgt * 1.10;
             }
-
-
-            
-            switch (value)
-            {
-                case 1:
-                    _Provision = _solgt * 1.05;
-                    break;
-
-                case 2:
-                    _Provision = _solgt * 1.07;
-                    break;
-
-                case 3:
-                    _Provision = _solgt * 1.10;
-                    break;
-            }
-
-
         }
+
+        public double Getprovision => _Provision;
+
+        //public double GetProvision
+        //{
+        //    get {
+        //        switch (_value)
+        //        {
+        //            case 1:
+        //                _Provision = _solgt * 1.05;
+        //                break;
+
+        //            case 2:
+        //                 _Provision = _solgt * 1.05;
+        //                break;
+
+        //            case 3:
+        //                _Provision = _solgt * 1.10;
+        //                break;
+
+        //        }
+        //        return _Provision;
+        //    }
+        //}
+
+
+
     }
 
-    
 }
