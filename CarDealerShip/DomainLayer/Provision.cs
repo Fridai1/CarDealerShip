@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using Windows.Storage.Search;
+using CarDealerShip.DomainLayer;
 
 namespace CarDealerShip
 {
