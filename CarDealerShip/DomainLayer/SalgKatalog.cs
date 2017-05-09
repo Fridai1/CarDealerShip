@@ -11,7 +11,26 @@ namespace CarDealerShip.DomainLayer
             _salgKatalog = new List<Salg>();
         }
 
-        public static Salg GetSalg(int id)
+        public static double GetTotalSalg(int id)
+        {
+            int i = 0;
+            double value = 0;
+
+            while (i < _salgKatalog.Count)
+            {
+                if (_salgKatalog[i].ID == id)
+                {
+                    double plus = _salgKatalog[i].Price;
+                    value = plus + value;
+                }
+                i++;
+            }
+            return value;
+        }
+
+
+
+        public static int GetIdSalg(int id)
         {
             int i = 0;
 
@@ -19,12 +38,11 @@ namespace CarDealerShip.DomainLayer
             {
                 if (_salgKatalog[i].ID == id)
                 {
-                    return _salgKatalog[i];
-                 
+                    return _salgKatalog[i].ID;
                 }
                 i++;
             }
-            return null;
+            return 0;
         }
 
 
