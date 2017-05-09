@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
 
-namespace CarDealerShip
+namespace CarDealerShip.DomainLayer
 {
-    public class SalgKatalog
+    public static class SalgKatalog
     {
-        private List<Salg> _salgKatalog;
+        private static List<Salg> _salgKatalog;
 
-        public SalgKatalog()
+        static SalgKatalog()
         {
             _salgKatalog = new List<Salg>();
         }
 
-        public Salg GetSalg(int id)
+        public static Salg GetSalg(int id)
         {
             int i = 0;
 
@@ -28,7 +28,7 @@ namespace CarDealerShip
         }
 
 
-        public void OpretSalg(Salg salg)
+        public static void OpretSalg(Salg salg)
         {
             _salgKatalog.Add(salg);
 
