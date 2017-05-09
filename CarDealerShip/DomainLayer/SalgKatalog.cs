@@ -13,16 +13,20 @@ namespace CarDealerShip
 
         public Salg GetSalg(int id)
         {
-            foreach (Salg salg in _salgKatalog)
-            {
-                if (salg.ID == id)
-                {
-                    return salg;
-                }
-            }
+            int i = 0;
 
+            while (i < _salgKatalog.Count)
+            {
+                if (_salgKatalog[i].ID == id)
+                {
+                    return _salgKatalog[i];
+                 
+                }
+                i++;
+            }
             return null;
         }
+
 
         public void OpretSalg(Salg salg)
         {
