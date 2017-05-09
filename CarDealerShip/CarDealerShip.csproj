@@ -101,10 +101,11 @@
     <Compile Include="DomainLayer\IdGenerator.cs" />
     <Compile Include="DomainLayer\Kunde.cs" />
     <Compile Include="DomainLayer\Kundekatalog.cs" />
+    <Compile Include="DomainLayer\SaleKatalog.cs" />
     <Compile Include="View\ProvisionView.xaml.cs">
       <DependentUpon>ProvisionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\Login.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
