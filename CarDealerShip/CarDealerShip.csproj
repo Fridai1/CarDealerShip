@@ -101,7 +101,8 @@
     <Compile Include="DomainLayer\IdGenerator.cs" />
     <Compile Include="DomainLayer\Kunde.cs" />
     <Compile Include="DomainLayer\Kundekatalog.cs" />
-    <Compile Include="DomainLayer\SaleKatalog.cs" />
+    <Compile Include="DomainLayer\SalgKatalog.cs" />
+    <Compile Include="DomainLayer\Salg.cs" />
     <Compile Include="View\ProvisionView.xaml.cs">
       <DependentUpon>ProvisionView.xaml</DependentUpon>
     </Compile>
