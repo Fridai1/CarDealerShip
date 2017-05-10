@@ -2,21 +2,21 @@
 
 namespace CarDealerShip
 {
-    class KundeKatalog
+    public static class KundeKatalog
     {
-        private List<Kunde> _kundes;
+        private static List<Kunde> _kundes;
 
-        public KundeKatalog()
+        static KundeKatalog()
         {
             _kundes = new List<Kunde>();
         }
 
-        public void AddKunde(Kunde aKunde) //tilføj kunde
+        public static void AddKunde(Kunde aKunde) //tilføj kunde
         {
             _kundes.Add(aKunde);
         }
 
-        public Kunde GetKunde(long telefon) //find kunde med bestemt telefonnummer
+        public static Kunde GetKunde(long telefon) //find kunde med bestemt telefonnummer
         {
             Kunde x;
             x = null;
@@ -29,7 +29,7 @@ namespace CarDealerShip
             return x;
         }
 
-        public void Delete(Kunde aKunde) //slet kunde
+        public static void Delete(Kunde aKunde) //slet kunde
         {
             _kundes.Remove(aKunde);
         }
