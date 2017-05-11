@@ -29,7 +29,12 @@ namespace CarDealerShip
 
         private void submitButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            //indsæt vm kode
+        }
+
+        private void backToMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
