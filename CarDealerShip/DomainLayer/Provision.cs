@@ -47,6 +47,28 @@ namespace CarDealerShip
             }
         }
 
+        public double GetProv
+        {
+            get
+            {
+                if (_solgt >= 1 || _solgt <= 99999)
+                {
+                    _Provision = _solgt * 1.05;
+                    //_value = 1;
+                }
+                else if (_solgt >= 100000 || _solgt < 200000)
+                {
+                    //_value = 2;
+                    _Provision = _solgt * 1.05;
+                }
+                else if (_solgt > 200000)
+                {
+                    //_value = 3;
+                    _Provision = _solgt * 1.10;
+                }
+                return _Provision;
+            }
+        }
         public double Getprovision => _Provision;
 
         public int getID

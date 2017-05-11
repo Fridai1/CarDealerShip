@@ -17,11 +17,11 @@ namespace CarDealerShip
   
         }
 
-        public int id => _domainObject.getID;
+        public int Getid => _domainObject.getID;
 
         public double TotalSolgt => _domainObject.GetTotalSolgt;
 
-        public double Provision => _domainObject.Getprovision;
+        public double Provision => _domainObject.GetProv;
 
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -105,6 +105,7 @@
     <Compile Include="DomainLayer\Salg.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\ProvisionItemViewModel.cs" />
+    <Compile Include="ViewModel\ProvisionMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\ProvisionMasterViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\ProvisionView.xaml.cs">
