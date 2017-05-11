@@ -103,7 +103,6 @@
     <Compile Include="DomainLayer\Kundekatalog.cs" />
     <Compile Include="DomainLayer\SalgKatalog.cs" />
     <Compile Include="DomainLayer\Salg.cs" />
-    <Compile Include="ViewModel\SalgViewModel.cs" />
     <Compile Include="ViewModel\ProvisionViewModel.cs" />
     <Compile Include="View\ProvisionView.xaml.cs">
       <DependentUpon>ProvisionView.xaml</DependentUpon>
@@ -190,9 +189,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <SDKReference Include="WindowsDesktop, Version=10.0.14393.0">
+      <Name>Windows Desktop Extensions for the UWP</Name>
+    </SDKReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

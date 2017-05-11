@@ -1,6 +1,6 @@
 ﻿namespace CarDealerShip
 {
-    class Kunde : Person
+    public class Kunde : Person
     {
         
 

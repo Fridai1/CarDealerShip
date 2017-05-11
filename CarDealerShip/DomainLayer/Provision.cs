@@ -17,7 +17,7 @@ namespace CarDealerShip
 
             _value = 0;
             _id = id;
-            _solgt = SalgKatalog.GetSalg(_id).Price;
+            _solgt = SalgKatalog.GetTotalSalg(_id);
 
 
 
@@ -28,7 +28,6 @@ namespace CarDealerShip
 
         public void provision()
         {
-
 
             if (_solgt >= 1 || _solgt <= 99999)
             {
@@ -47,7 +46,39 @@ namespace CarDealerShip
             }
         }
 
+        public double GetProv
+        {
+            get
+            {
+                if (_solgt >= 1 || _solgt <= 99999)
+                {
+                    _Provision = _solgt * 1.05;
+                    //_value = 1;
+                }
+                else if (_solgt >= 100000 || _solgt < 200000)
+                {
+                    //_value = 2;
+                    _Provision = _solgt * 1.05;
+                }
+                else if (_solgt > 200000)
+                {
+                    //_value = 3;
+                    _Provision = _solgt * 1.10;
+                }
+                return _Provision;
+            }
+        }
         public double Getprovision => _Provision;
+
+        public int getID
+        {
+            get { return SalgKatalog.GetIdSalg(_id); }
+        }
+
+        public double GetTotalSolgt
+        {
+            get { return _solgt; }
+        }
 
         //public double GetProvision
         //{

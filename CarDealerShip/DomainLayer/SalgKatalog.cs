@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace CarDealerShip.DomainLayer
 {
@@ -10,6 +11,8 @@ namespace CarDealerShip.DomainLayer
         {
             _salgKatalog = new List<Salg>();
         }
+
+        public static List<Salg> Salgs { get { return _salgKatalog.ToList(); } }
 
         public static double GetTotalSalg(int id)
         {
