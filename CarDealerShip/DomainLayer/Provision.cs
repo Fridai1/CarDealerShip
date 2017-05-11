@@ -17,7 +17,7 @@ namespace CarDealerShip
 
             _value = 0;
             _id = id;
-            _solgt = SalgKatalog.GetSalg(_id).Price;
+            _solgt = SalgKatalog.GetTotalSalg(_id);
 
 
 
@@ -48,6 +48,16 @@ namespace CarDealerShip
         }
 
         public double Getprovision => _Provision;
+
+        public int getID
+        {
+            get { return SalgKatalog.GetIdSalg(_id); }
+        }
+
+        public double GetTotalSolgt
+        {
+            get { return _solgt; }
+        }
 
         //public double GetProvision
         //{
