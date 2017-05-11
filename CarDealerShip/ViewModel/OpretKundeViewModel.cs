@@ -8,9 +8,11 @@ namespace CarDealerShip
     {
         private Kunde _domainobject;
 
+
         public OpretKundeViewModel(Kunde k)
         {
             _domainobject = k;
+            
         }
 
         public string Navn
@@ -18,6 +20,8 @@ namespace CarDealerShip
             get { return _domainobject.Navn; }
             set { _domainobject.Navn = value; }
         }
+
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
 

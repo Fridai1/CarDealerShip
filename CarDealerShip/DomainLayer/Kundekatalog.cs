@@ -23,7 +23,10 @@ namespace CarDealerShip
             
         }
 
-
+        public void OpretKunde(Kunde akunde)
+        {
+            _Kundelist.Add(akunde);
+        }
 
 
 
