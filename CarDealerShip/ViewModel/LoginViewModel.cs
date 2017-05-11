@@ -1,4 +1,4 @@
-﻿namespace CarDealerShip
+﻿namespace CarDealerShip.ViewModel
 {
     public class Login
     {
