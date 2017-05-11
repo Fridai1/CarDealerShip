@@ -14,8 +14,10 @@ namespace CarDealerShip
             {
                 items.Add(new ProvisionItemViewModel(s));
             }
+          return items;
         }
-        ProvisionMasterViewModel()
+
+        public ProvisionMasterViewModel()
         {
             
         }

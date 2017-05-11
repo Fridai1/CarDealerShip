@@ -29,7 +29,6 @@ namespace CarDealerShip
         public void provision()
         {
 
-
             if (_solgt >= 1 || _solgt <= 99999)
             {
                 _Provision = _solgt * 1.05;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip 
 {
-    class Person
+    public class Person
     {
         private string _navn;
         private string _addresse;

@@ -104,6 +104,8 @@
     <Compile Include="DomainLayer\SalgKatalog.cs" />
     <Compile Include="DomainLayer\Salg.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="test.cs" />
+    <Compile Include="ViewModel\OpretKundeViewModel.cs" />
     <Compile Include="ViewModel\ProvisionItemViewModel.cs" />
     <Compile Include="ViewModel\ProvisionMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\ProvisionMasterViewModel.cs" />
@@ -193,9 +195,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <SDKReference Include="WindowsDesktop, Version=10.0.14393.0">
+      <Name>Windows Desktop Extensions for the UWP</Name>
+    </SDKReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
