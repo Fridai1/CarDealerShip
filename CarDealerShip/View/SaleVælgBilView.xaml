@@ -62,7 +62,7 @@
             </StackPanel>
             <StackPanel Height="230" Margin="0,0,14,0" Orientation="Horizontal">
                 <Button x:Name="submitButton" Content="Videre" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition"/>
-                <Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" Click="backToMenuButton_Click"/>
+                <!--<Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" />-->
             </StackPanel>
         </StackPanel>
 
