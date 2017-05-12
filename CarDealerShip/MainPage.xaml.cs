@@ -29,27 +29,27 @@ namespace CarDealerShip
        
         private void opretNyBil_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CarDealerShip.OpretBilView));
+            this.Frame.Navigate(typeof(OpretBilView));
         }
 
         private void opretNyKunde_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CarDealerShip.OpretKundeView));
+            this.Frame.Navigate(typeof(OpretKundeView));
         }
 
         private void opretNySælger_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CarDealerShip.OpretSælgerView));
+            this.Frame.Navigate(typeof(OpretSælgerView));
         }
 
         private void opretNytSalg_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CarDealerShip.SaleVælgBilView));
+            this.Frame.Navigate(typeof(SaleVælgBilView));
         }
 
         private void seProvision_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CarDealerShip.ProvisionView));
+            this.Frame.Navigate(typeof(ProvisionView));
         }
     }
 }
