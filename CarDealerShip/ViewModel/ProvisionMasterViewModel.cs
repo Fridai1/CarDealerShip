@@ -6,11 +6,11 @@ namespace CarDealerShip
 {
     public class ProvisionMasterViewModel
     {
-        public List<ProvisionItemViewModel> GetProvisionitemviewmodelCollection()
+        public List<ProvisionItemViewModel> GetProvisionitemviewmodelCollection(SalgKatalog katalog)
         {
             List<ProvisionItemViewModel> items = new List<ProvisionItemViewModel>();
 
-            foreach (Salg s in SalgKatalog.Salgs)
+            foreach (Salg s in SalgKatalog.Instance.Salgs)
             {
                 items.Add(new ProvisionItemViewModel(s));
             }

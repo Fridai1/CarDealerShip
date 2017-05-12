@@ -8,28 +8,28 @@ namespace CarDealerShip
     public class ProvisionItemViewModel : INotifyPropertyChanged
     {
         private Salg _domainobject;
-        //private Provision _domainObject;
+        
+
+        
 
         public ProvisionItemViewModel(Salg s)
         {
             _domainobject = s;
+           
         }
 
-        //public ProvisionItemViewModel(Provision p)
-        //{
-        //    _domainObject = p;
-  
-        //}
+        
 
         public int GetId { get { return _domainobject.ID; }  }
 
-        //public int Getid => _domainObject.getID;
+        
 
+        public string GetNavn { get { return _domainobject.GetName; } }
 
+       
 
-        //public double TotalSolgt => _domainObject.GetTotalSolgt;
+        public double GetSolgt { get { return _domainobject.Price; } }    
 
-        //public double Provision => _domainObject.GetProv;
 
 
         public event PropertyChangedEventHandler PropertyChanged;

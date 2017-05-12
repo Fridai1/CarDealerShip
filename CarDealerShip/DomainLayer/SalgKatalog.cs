@@ -3,18 +3,33 @@ using System.Linq;
 
 namespace CarDealerShip.DomainLayer
 {
-    public static class SalgKatalog
+    public class SalgKatalog
     {
-        private static List<Salg> _salgKatalog;
 
-        static SalgKatalog()
+        private static SalgKatalog _instance = null;
+        private List<Salg> _salgKatalog;
+
+        public static SalgKatalog Instance
         {
-            _salgKatalog = new List<Salg>();
+            get
+            {
+                if (_instance != null) return _instance;
+                _instance = new SalgKatalog();
+                return _instance;
+            }
         }
 
-        public static List<Salg> Salgs { get { return _salgKatalog.ToList(); } }
+        public SalgKatalog()
+        {
+            
+        }
+        
 
-        public static double GetTotalSalg(int id)
+       
+
+        public  List<Salg> Salgs { get { return _salgKatalog.ToList(); } }
+
+        public  double GetTotalSalg(int id)
         {
             int i = 0;
             double value = 0;
@@ -33,7 +48,7 @@ namespace CarDealerShip.DomainLayer
 
 
 
-        public static int GetIdSalg(int id)
+        public int GetIdSalg(int id)
         {
             int i = 0;
 
@@ -49,7 +64,7 @@ namespace CarDealerShip.DomainLayer
         }
 
 
-        public static void OpretSalg(Salg salg)
+        public  void OpretSalg(Salg salg)
         {
             _salgKatalog.Add(salg);
 
