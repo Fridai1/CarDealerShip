@@ -16,6 +16,7 @@ namespace CarDealerShip
         public ProvisionItemViewModel(Salg s)
         {
             _domainobject = s;
+           _provision = new Provision(_domainobject.ID);
         }
 
         
