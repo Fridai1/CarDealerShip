@@ -11,13 +11,14 @@ namespace CarDealerShip
     {
         private ProvisionItemViewModel _provisionitemViewModelSelected;
         private ProvisionMasterViewModel _ProvisionMasterViewModel;
-        
+        private Provision _prov;
         
 
         public ProvisionMasterDetailsViewModel()
         {
             _ProvisionMasterViewModel = new ProvisionMasterViewModel();
             _provisionitemViewModelSelected = null;
+            _prov = new Provision(_provisionitemViewModelSelected.GetId);
 
         }
 
@@ -30,6 +31,8 @@ namespace CarDealerShip
         {
             get { return _provisionitemViewModelSelected; }
         }
+
+        public double getprov { get { return _prov.GetProv; } }
 
         
         
