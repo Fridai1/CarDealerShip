@@ -8,14 +8,14 @@ namespace CarDealerShip
     {
         private double _Provision;
 
-        private int _value;
+       
         private int _id;
         private double _solgt;
         public Provision(int id)
         {
             _Provision = 0;
 
-            _value = 0;
+            
             _id = id;
             _solgt = SalgKatalog.Instance.GetTotalSalg(_id);
 

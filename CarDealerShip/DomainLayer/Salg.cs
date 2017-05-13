@@ -7,10 +7,11 @@
         private string _name;
         
 
-        public Salg(int ID, double Price)
+        public Salg(int ID, double Price, string name)
         {
             _id = ID;
             _price = Price;
+            _name = name;
         }
 
         public string GetName { get { return _name; } }
