@@ -10,7 +10,7 @@ namespace CarDealerShip
         {
             List<ProvisionItemViewModel> items = new List<ProvisionItemViewModel>();
 
-            foreach (Salg s in SalgKatalog.Instance.Salgs)
+            foreach (Salg s in katalog.Salgs)
             {
                 items.Add(new ProvisionItemViewModel(s));
             }

@@ -8,6 +8,7 @@ namespace CarDealerShip
     public class ProvisionItemViewModel : INotifyPropertyChanged
     {
         private Salg _domainobject;
+        private Provision _provision;
         
 
         
@@ -28,7 +29,9 @@ namespace CarDealerShip
 
        
 
-        public double GetSolgt { get { return _domainobject.Price; } }    
+        public double GetSolgt { get { return _domainobject.Price; } }
+
+        public double GetProv { get { return _provision.GetProv; }  } 
 
 
 
