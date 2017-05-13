@@ -105,7 +105,9 @@
     <Compile Include="DomainLayer\Salg.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="test.cs" />
-    <Compile Include="ViewModel\BilViewModel.cs" />
+    <Compile Include="ViewModel\BilMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\BilMasterViewModel.cs" />
+    <Compile Include="ViewModel\BilItemViewModel.cs" />
     <Compile Include="ViewModel\KundeItemViewModel.cs" />
     <Compile Include="ViewModel\OpretKundeViewModel.cs" />
     <Compile Include="ViewModel\ProvisionItemViewModel.cs" />

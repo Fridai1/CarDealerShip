@@ -24,6 +24,12 @@ namespace CarDealerShip
         public BilKatalog()
         {
             _bilkatalog = new List<Bil>();
+            _instance = this;
+        }
+
+        public List<Bil> GetBilKatalog()
+        {
+            return _bilkatalog;
         }
       
         public Bil GetBil(long stelNr)
@@ -41,8 +47,15 @@ namespace CarDealerShip
 
         public void OpretBil(Bil bil)
         {
-            _bilkatalog.Add(bil);
+            //test kode
+            var test = (from item in _bilkatalog where item.StelNr == bil.StelNr select item).SingleOrDefault();
 
+            if (test != null)
+                _bilkatalog.Remove(test);
+            //
+
+
+            _bilkatalog.Add(bil);
         }
 
         public void DeleteBil(long stelNr)
