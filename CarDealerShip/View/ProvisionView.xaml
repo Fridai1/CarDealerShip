@@ -25,28 +25,28 @@
         <StackPanel Margin="10,98,0,10" Background="#FF858585" HorizontalAlignment="Left" Width="943" d:LayoutOverrides="TopPosition, BottomPosition">
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock4" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="ID:"/>
-                <TextBox x:Name="textBox2" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox2"  Margin="20" SelectedText="{Binding ProvisionItemViewModelSelected.GetId}" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock5" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Navn"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox3" SelectedText="{Binding ProvisionItemViewModelSelected.GetNavn}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox3"  SelectedText="{Binding ProvisionItemViewModelSelected.GetNavn}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock6" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Solgt for denne måned"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox4" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox4"  Margin="20" SelectedText="{Binding ProvisionItemViewModelSelected.GetSolgt}" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock7" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Provison"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox5" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox5"  Margin="20" SelectedText="{Binding ProvisionItemViewModelSelected.GetProv}" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Margin="0,98,10,10" Background="#FF858585" HorizontalAlignment="Right" Width="937" d:LayoutOverrides="TopPosition, BottomPosition">

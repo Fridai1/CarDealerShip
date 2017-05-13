@@ -14,7 +14,10 @@
             _name = name;
         }
 
-        public string GetName { get { return _name; } }
+        public string GetName
+        {
+            get { return _name; }
+        }
 
         public double Price //der er ingen grund til at kunne rette i prisen for en bil når salget er foretaget, derfor er der kun en get og ikk en set
         {
