@@ -21,7 +21,7 @@ namespace CarDealerShip.DomainLayer
 
         public SalgKatalog()
         {
-            
+            _salgKatalog = new List<Salg>();
         }
         
 

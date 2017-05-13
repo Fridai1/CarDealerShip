@@ -32,7 +32,7 @@ namespace CarDealerShip
         }
         
 
-        //public List<> Type { get; set; }
+        
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
