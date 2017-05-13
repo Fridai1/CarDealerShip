@@ -21,12 +21,12 @@ namespace CarDealerShip
             _bilMasterViewModel = new BilMasterViewModel();
         }
 
-        public List<BilItemViewModel> ProvisionItemViewModelCollection
+        public List<BilItemViewModel> BilItemViewModelCollection
         {
             get { return _bilMasterViewModel.GetBilItemViewModelCollection(BilKatalog.Instance); }
         }
 
-        public BilItemViewModel ProvisionItemViewModelSelected
+        public BilItemViewModel BilItemViewModelSelected
         {
             get { return _bilItemViewModelSelected; }
         }
