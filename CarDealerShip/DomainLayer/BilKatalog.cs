@@ -8,7 +8,18 @@ namespace CarDealerShip
 {
     public class BilKatalog
     {
+        private static BilKatalog _instance = null;
         private List<Bil> _bilkatalog;
+
+        public static BilKatalog Instance
+        {
+            get
+            {
+                if (_instance != null) return _instance;
+                _instance = new BilKatalog();
+                return _instance;
+            }
+        }
 
         public BilKatalog()
         {
