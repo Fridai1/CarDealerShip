@@ -31,7 +31,7 @@ namespace CarDealerShip
 
         public double GetSolgt { get { return _domainobject.Price; } }
 
-        public double GetProv { get { return _provision.GetProv; }  } 
+        public double GetProvi { get { return _provision.GetProv; } }
 
 
 

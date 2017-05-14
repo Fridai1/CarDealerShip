@@ -37,7 +37,7 @@ namespace CarDealerShip
             else if (_solgt >= 100000 || _solgt < 200000)
             {
                 //_value = 2;
-                _Provision = _solgt * 1.05 - _solgt;
+                _Provision = _solgt * 1.07 - _solgt;
             }
             else if (_solgt > 200000)
             {
@@ -58,7 +58,7 @@ namespace CarDealerShip
                 else if (_solgt >= 100000 || _solgt < 200000)
                 {
                     
-                    _Provision = _solgt * 1.05 - _solgt;
+                    _Provision = _solgt * 1.07 - _solgt;
                 }
                 else if (_solgt > 200000)
                 {
