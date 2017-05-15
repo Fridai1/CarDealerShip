@@ -8,9 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlock" Margin="336,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="292">
+        <TextBlock x:Name="textBlock" Margin="336,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="365" SelectionChanged="textBlock_SelectionChanged">
             <Run Text="Opret "/>
-            <Run Text="sælger"/>
+            <Run Text="medarbejder"/>
         </TextBlock>
         <TextBlock x:Name="textBlock_Copy" Margin="0,15,332,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Right" Height="63" VerticalAlignment="Top" Width="292">
             <Run Text="Sælger "/>
@@ -30,6 +30,13 @@
                     <Run Text=":"/>
                 </TextBlock>
                 <TextBox x:Name="textBox3" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+            </StackPanel>
+            <StackPanel Height="98" Orientation="Horizontal">
+                <TextBlock x:Name="textBlock1" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Stilling:"/>
+                <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="450" Margin="20">
+                    <ComboBoxItem x:Name="stillingChef" Content="Chef" Height="100" Width="100"/>
+                    <ComboBoxItem x:Name="stillingSælger" Content="Sælger" Height="100" Width="100"/>
+                </ComboBox>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal"/>
             <StackPanel Height="98" Orientation="Horizontal"/>
