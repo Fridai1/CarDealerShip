@@ -8,16 +8,16 @@ namespace CarDealerShip
     {
         private double _Provision;
 
-        private int _value;
+       
         private int _id;
         private double _solgt;
         public Provision(int id)
         {
-            double _provision = 0;
+            _Provision = 0;
 
-            _value = 0;
+            
             _id = id;
-            _solgt = SalgKatalog.GetTotalSalg(_id);
+            _solgt = SalgKatalog.Instance.GetTotalSalg(_id);
 
 
 
@@ -31,18 +31,18 @@ namespace CarDealerShip
 
             if (_solgt >= 1 || _solgt <= 99999)
             {
-                _Provision = _solgt * 1.05;
+                _Provision = _solgt * 1.05 - _solgt;
                 //_value = 1;
             }
             else if (_solgt >= 100000 || _solgt < 200000)
             {
                 //_value = 2;
-                _Provision = _solgt * 1.05;
+                _Provision = _solgt * 1.07 - _solgt;
             }
             else if (_solgt > 200000)
             {
                 //_value = 3;
-                _Provision = _solgt * 1.10;
+                _Provision = _solgt * 1.10 - _solgt;
             }
         }
 
@@ -52,27 +52,27 @@ namespace CarDealerShip
             {
                 if (_solgt >= 1 || _solgt <= 99999)
                 {
-                    _Provision = _solgt * 1.05;
-                    //_value = 1;
+                    _Provision = _solgt * 1.05 - _solgt;
+                    
                 }
                 else if (_solgt >= 100000 || _solgt < 200000)
                 {
-                    //_value = 2;
-                    _Provision = _solgt * 1.05;
+                    
+                    _Provision = _solgt * 1.07 - _solgt;
                 }
                 else if (_solgt > 200000)
                 {
-                    //_value = 3;
-                    _Provision = _solgt * 1.10;
+                    
+                    _Provision = _solgt * 1.10 - _solgt;
                 }
                 return _Provision;
             }
         }
-        public double Getprovision => _Provision;
+        //public double Getprovision => _Provision;
 
         public int getID
         {
-            get { return SalgKatalog.GetIdSalg(_id); }
+            get { return SalgKatalog.Instance.GetIdSalg(_id); }
         }
 
         public double GetTotalSolgt

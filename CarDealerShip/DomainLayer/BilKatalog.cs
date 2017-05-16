@@ -8,11 +8,28 @@ namespace CarDealerShip
 {
     public class BilKatalog
     {
+        private static BilKatalog _instance = null;
         private List<Bil> _bilkatalog;
+
+        public static BilKatalog Instance
+        {
+            get
+            {
+                if (_instance != null) return _instance;
+                _instance = new BilKatalog();
+                return _instance;
+            }
+        }
 
         public BilKatalog()
         {
             _bilkatalog = new List<Bil>();
+            _instance = this;
+        }
+
+        public List<Bil> GetBilKatalog()
+        {
+            return _bilkatalog;
         }
       
         public Bil GetBil(long stelNr)
@@ -30,8 +47,15 @@ namespace CarDealerShip
 
         public void OpretBil(Bil bil)
         {
-            _bilkatalog.Add(bil);
+            //test kode
+            var test = (from item in _bilkatalog where item.StelNr == bil.StelNr select item).SingleOrDefault();
 
+            if (test != null)
+                _bilkatalog.Remove(test);
+            //
+
+
+            _bilkatalog.Add(bil);
         }
 
         public void DeleteBil(long stelNr)

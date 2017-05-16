@@ -26,15 +26,5 @@ namespace CarDealerShip
         {
             this.InitializeComponent();
         }
-
-        private void backToMenuButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage)); //indsæt vm kode
-        }
-
-        private void submitButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(SaleVælgKundeView));
-        }
     }
 }

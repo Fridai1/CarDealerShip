@@ -7,8 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+
+    <Page.DataContext>
+        <local:ProvisionMasterDetailsViewModel/>
+    </Page.DataContext>
+
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlock" Margin="336,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="292" SelectionChanged="textBlock_SelectionChanged">
+        <TextBlock  Margin="336,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="292">
             <Run Text=""/>
             <Run Text="Provision"/>
         </TextBlock>
@@ -19,37 +25,51 @@
         <StackPanel Margin="10,98,0,10" Background="#FF858585" HorizontalAlignment="Left" Width="943" d:LayoutOverrides="TopPosition, BottomPosition">
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock4" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="ID:"/>
-                <TextBox x:Name="textBox2" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox2"  Margin="20" SelectedText="{Binding ProvisionItemViewModelSelected.GetId}" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock5" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Navn"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox3" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox3"  SelectedText="{Binding ProvisionItemViewModelSelected.GetNavn}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock6" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Solgt for denne måned"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox4" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox4"  Margin="20" SelectedText="{Binding ProvisionItemViewModelSelected.GetSolgt}" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock7" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Provison"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox5" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox5"  Margin="20" SelectedText="{Binding ProvisionItemViewModelSelected.GetProvi}" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Margin="0,98,10,10" Background="#FF858585" HorizontalAlignment="Right" Width="937" d:LayoutOverrides="TopPosition, BottomPosition">
-            <ListView x:Name="listView" Background="White" BorderThickness="0" Margin="20,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887"/>
+            <ListView x:Name="listView" ItemsSource="{Binding ProvisionItemViewModelCollection}" SelectedItem="{Binding ProvisionItemViewModelSelected}" Background="White" BorderThickness="0" Margin="20,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887">
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <StackPanel>
+                            <StackPanel Margin="10,10,10,10">
+                                <TextBlock FontSize="24" Text="{Binding GetId}"/>
+                                <TextBlock FontSize="24" Text="{Binding GetNavn}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackPanel>
         <StackPanel Height="230" Margin="10,0,0,164" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="923">
-            <Button x:Name="submitButton" Content="Udregn" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition" Click="submitButton_Click"/>
-            <Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" Click="backToMenuButton_Click"/>
+            <Button x:Name="submitButton" Content="Udregn" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition" />
+            <!--<Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" />-->
         </StackPanel>
 
     </Grid>
 </Page>
+
