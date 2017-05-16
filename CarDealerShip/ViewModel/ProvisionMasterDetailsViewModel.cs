@@ -11,14 +11,14 @@ namespace CarDealerShip
     {
         private ProvisionItemViewModel _provisionitemViewModelSelected;
         private ProvisionMasterViewModel _ProvisionMasterViewModel;
-        private Provision _prov;
+        
         
 
         public ProvisionMasterDetailsViewModel()
         {
             _ProvisionMasterViewModel = new ProvisionMasterViewModel();
-            _provisionitemViewModelSelected = null;
-            _prov = new Provision(_provisionitemViewModelSelected.GetId);
+           
+          
 
         }
 
@@ -30,14 +30,21 @@ namespace CarDealerShip
         public ProvisionItemViewModel ProvisionItemViewModelSelected
         {
             get { return _provisionitemViewModelSelected; }
+            set
+            {
+                _provisionitemViewModelSelected = value; 
+                OnPropertyChanged();
+            }
         }
 
-        public double getprov { get { return _prov.GetProv; } }
-
-        //test
         
 
         
+
+
+
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
