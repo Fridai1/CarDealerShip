@@ -89,8 +89,13 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="ClassDiagram1.cd" />
     <None Include="project.json" />
+    <Compile Include="ViewModel\BilItemViewModel.cs" />
+    <Compile Include="ViewModel\BilMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\BilMasterViewModel.cs" />
     <Compile Include="ViewModel\KundeMasterViewModel.cs" />
+    <None Include="ViewModel\kundeitemvm" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainLayer\Bil.cs" />
@@ -107,6 +112,10 @@
     <Compile Include="Properties\Annotations1.cs" />
     <Compile Include="ViewModel\KundeItemViewModel.cs" />
     <Compile Include="ViewModel\KundeMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\OpretKundeViewModel.cs" />
+    <Compile Include="ViewModel\ProvisionItemViewModel.cs" />
+    <Compile Include="ViewModel\ProvisionMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\ProvisionMasterViewModel.cs" />
     <Compile Include="ViewModel\ProvisionViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\ProvisionView.xaml.cs">
