@@ -9,7 +9,7 @@ namespace CarDealerShip.ViewModel
     public class KundeMasterDetailsViewModel : INotifyPropertyChanged
     {
         private KundeItemViewModel _kundeItemViewModelSelected;
-        private KundeMasterViewModel _kundeMasterViewModel;
+        private KundeMasterViewModel _kundeMasterViewModel; 
 
 
         public KundeMasterDetailsViewModel()

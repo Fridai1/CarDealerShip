@@ -14,7 +14,7 @@ namespace CarDealerShip.ViewModel
 
         public string Navn
         {
-            get { return _domainobject.Navn; }
+            get { return _domainobject.Navn; } 
         }
 
         public string Adresse
