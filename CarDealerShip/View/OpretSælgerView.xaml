@@ -8,9 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlock" Margin="336,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="365" SelectionChanged="textBlock_SelectionChanged">
+        <TextBlock x:Name="textBlock" Margin="336,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="292">
             <Run Text="Opret "/>
-            <Run Text="medarbejder"/>
+            <Run Text="sælger"/>
         </TextBlock>
         <TextBlock x:Name="textBlock_Copy" Margin="0,15,259,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Right" Height="63" VerticalAlignment="Top" Width="365">
             <Run Text="Medarbejder"/>
@@ -46,10 +46,6 @@
                     <Run Text=":"/>
                 </TextBlock>
                 <TextBox x:Name="textBox3" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
-            </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal">
-                <TextBlock x:Name="textBlock4_Copy2" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="ID-numer:"/>
-                <TextBox x:Name="textBox2_Copy2" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24" Background="#66FF0000"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal"/>
         </StackPanel>
