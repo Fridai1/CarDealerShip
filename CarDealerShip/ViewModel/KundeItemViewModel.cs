@@ -1,14 +1,13 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using CarDealerShip.Annotations;
 
-namespace CarDealerShip
+namespace CarDealerShip.ViewModel
 {
-    public class OpretKundeViewModel : INotifyPropertyChanged
+    public class KundeItemViewModel : INotifyPropertyChanged
     {
         private Kunde _domainobject;
 
-        public OpretKundeViewModel(Kunde k)
+        public KundeItemViewModel(Kunde k)
         {
             _domainobject = k;
         }
@@ -16,30 +15,33 @@ namespace CarDealerShip
         public string Navn
         {
             get { return _domainobject.Navn; }
-            set { _domainobject.Navn = value; }
         }
 
         public string Adresse
         {
-            get { return _domainobject.adresse;  }
-            set { _domainobject.adresse = value; }
+            get { return _domainobject.Addresse; }
         }
 
         public string Email
         {
             get { return _domainobject.Email; }
-            set { _domainobject.Email = value; }
+            
         }
 
         public long Telefon
         {
-            get { return _domainobject.Telefon; }
-            set { _domainobject.Telefon = value; }
+            get { return _domainobject.TelefonNummer; }
+            
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public void SubmitKunde()
+        {
+            KundeKatalog.Instance.OpretKunde(_domainobject);
+        }
 
-        [NotifyPropertyChangedInvocator]
+       public event PropertyChangedEventHandler PropertyChanged;
+
+        
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

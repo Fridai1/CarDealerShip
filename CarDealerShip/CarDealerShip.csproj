@@ -103,7 +103,12 @@
     <Compile Include="DomainLayer\Kundekatalog.cs" />
     <Compile Include="DomainLayer\SalgKatalog.cs" />
     <Compile Include="DomainLayer\Salg.cs" />
+    <Compile Include="Properties\Annotations1.cs" />
+    <Compile Include="ViewModel\KundeItemViewModel.cs" />
+    <Compile Include="ViewModel\KundeMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\KundeMasterViewModel.cs" />
     <Compile Include="ViewModel\ProvisionViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\ProvisionView.xaml.cs">
       <DependentUpon>ProvisionView.xaml</DependentUpon>
     </Compile>

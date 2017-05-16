@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CarDealerShip
 {
@@ -8,7 +9,6 @@ namespace CarDealerShip
 
         private List<Kunde> _Kundelist;
         public static KundeKatalog Instance
-       
         {
             get
             {
@@ -18,14 +18,15 @@ namespace CarDealerShip
             }
         }
 
-        private KundeKatalog()
+        public KundeKatalog()
         {
-            
+            _Kundelist = new List<Kunde>();
         }
 
-
-
-
+        public void OpretKunde(Kunde akunde)
+        {
+            _Kundelist.Add(akunde);
+        }
 
         public Kunde GetKunde(long telefon) //find kunde med bestemt telefonnummer
         {
@@ -34,8 +35,6 @@ namespace CarDealerShip
             foreach (Kunde y in _Kundelist )
             {
                 if (y.TelefonNummer == telefon) x = y;
-
-
             }
             return x;
         }
