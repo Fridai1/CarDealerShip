@@ -14,7 +14,7 @@ namespace CarDealerShip
             {
                 if (_instance != null) return _instance;
                 _instance = new KundeKatalog();
-                return _instance;
+                return _instance; 
             }
         }
 

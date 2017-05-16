@@ -14,7 +14,7 @@ namespace CarDealerShip.ViewModel
 
         public string Navn
         {
-            get { return _domainobject.Navn; } 
+            get { return _domainobject.Navn; }  
         }
 
         public string Adresse
@@ -34,10 +34,7 @@ namespace CarDealerShip.ViewModel
             
         }
 
-        public void SubmitKunde()
-        {
-            KundeKatalog.Instance.OpretKunde(_domainobject);
-        }
+       
 
        public event PropertyChangedEventHandler PropertyChanged;
 

@@ -8,7 +8,7 @@ namespace CarDealerShip.ViewModel
         {
             List<KundeItemViewModel> items = new List<KundeItemViewModel>();
 
-            foreach (Kunde k in katalog.GetKunde())
+            foreach (Kunde k in katalog.GetKunde()) 
             {
                 items.Add(new KundeItemViewModel(k));
             }

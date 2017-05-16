@@ -15,7 +15,7 @@ namespace CarDealerShip.ViewModel
         public KundeMasterDetailsViewModel()
         {
             _kundeMasterViewModel = new KundeMasterViewModel();
-            _kundeItemViewModelSelected = null;
+            _kundeItemViewModelSelected = null; 
         }
 
         public List<KundeItemViewModel> KundeItemViewModelCollection
@@ -33,6 +33,10 @@ namespace CarDealerShip.ViewModel
             }
         }
 
+        public void SubmitKunde()
+        {
+            KundeKatalog.Instance.OpretKunde(_domainobject);
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
