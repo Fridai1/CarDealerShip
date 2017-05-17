@@ -39,6 +39,8 @@ namespace CarDealerShip
             return x;
         }
 
+        public List<Kunde> GetKundeList { get { return _Kundelist; } }
+
         public void Delete(Kunde aKunde) //slet kunde
         {
             _Kundelist.Remove(aKunde);

@@ -21,8 +21,8 @@ namespace CarDealerShip
 
         public string Adresse
         {
-            get { return _domainobject.adresse;  }
-            set { _domainobject.adresse = value; }
+            get { return _domainobject.Addresse;  }
+            set { _domainobject.Addresse = value; }
         }
 
         public string Email
@@ -33,8 +33,8 @@ namespace CarDealerShip
 
         public long Telefon
         {
-            get { return _domainobject.Telefon; }
-            set { _domainobject.Telefon = value; }
+            get { return _domainobject.TelefonNummer; }
+            set { _domainobject.TelefonNummer = value; }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
