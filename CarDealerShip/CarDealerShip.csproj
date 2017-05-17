@@ -91,6 +91,9 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="ClassDiagram1.cd" />
     <None Include="project.json" />
+    <Compile Include="ViewModel\SalgMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\SalgMasterViewModel.cs" />
+    <Compile Include="ViewModel\SalgItemViewModel.cs" />
     <Compile Include="ViewModel\BilItemViewModel.cs" />
     <Compile Include="ViewModel\BilMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\BilMasterViewModel.cs" />
