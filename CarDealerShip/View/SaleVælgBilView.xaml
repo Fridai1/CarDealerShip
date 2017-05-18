@@ -7,61 +7,61 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <local:BilMasterDetailsViewModel/>
+    </Page.DataContext>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlock" Margin="258,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="406">
-            <Run Text="Vælg bil der skal sælge"/>
-            <Run Text="s"/>
+        <TextBlock x:Name="TextBlock" Margin="258,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="406">
+            <Run Text="Vælg bil der skal sælges"/>
         </TextBlock>
-        <TextBlock x:Name="textBlock_Copy" Margin="0,15,332,0" TextWrapping="Wrap" Text="Bil detaljer" FontSize="36" TextAlignment="Center" HorizontalAlignment="Right" Height="63" VerticalAlignment="Top" Width="292"/>
+        <TextBlock x:Name="TextBlockCopy" Margin="0,15,332,0" TextWrapping="Wrap" Text="Bil detaljer" FontSize="36" TextAlignment="Center" HorizontalAlignment="Right" Height="63" VerticalAlignment="Top" Width="292"/>
         <StackPanel Margin="10,98,0,10" Background="#FF858585" HorizontalAlignment="Left" Width="943" d:LayoutOverrides="TopPosition, BottomPosition">
-            <ListView x:Name="listView" Background="White" BorderThickness="0" Margin="25,25,31,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887"/>
+            <ListView x:Name="ListView" ItemsSource="{Binding BilItemViewModelCollection}" SelectedItem="{Binding BilItemViewModelSelected}" Background="White" BorderThickness="0" Margin="25,25,31,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887"/>
         </StackPanel>
         <StackPanel Margin="0,98,10,10" Background="#FF858585" HorizontalAlignment="Right" Width="937" d:LayoutOverrides="TopPosition, BottomPosition">
             <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
                 <TextBlock x:Name="textBlock1" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Stand af bil:"/>
-                <TextBox x:Name="textBox1_Copy" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox1_Copy" SelectedText="{Binding BilItemViewModelSelected.Stand}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
                 <TextBlock x:Name="textBlock3" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
-                    <Run Text="Type af bil"/>
-                    <Run Text=":"/>
+                    <Run Text="Type af bil:"/>
                 </TextBlock>
-                <TextBox x:Name="textBox1_Copy1" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox1_Copy1" SelectedText="{Binding BilItemViewModelSelected.Type}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
                 <TextBlock x:Name="textBlock2" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Mærke:"/>
-                <TextBox x:Name="textBox1" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox1" SelectedText="{Binding BilItemViewModelSelected.Fabrikant}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
                 <TextBlock x:Name="textBlock4" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
-                    <Run Text="Model"/>
-                    <Run Text=":"/>
+                    <Run Text="Model:"/>
                 </TextBlock>
-                <TextBox x:Name="textBox2" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox2" SelectedText="{Binding BilItemViewModelSelected.Model}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
                 <TextBlock x:Name="textBlock5" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
-                    <Run Text="Farve"/>
-                    <Run Text=":"/>
+                    <Run Text="Farve:"/>
                 </TextBlock>
-                <TextBox x:Name="textBox3" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox3" SelectedText="{Binding BilItemViewModelSelected.Farve}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
                 <TextBlock x:Name="textBlock6" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Motorstørrelse"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox4" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox4" SelectedText="{Binding BilItemViewModelSelected.MotorStr}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
                 <TextBlock x:Name="textBlock7" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Stel nummer"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox5" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox5" SelectedText="{Binding BilItemViewModelSelected.StelNr}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="230" Margin="0,0,14,0" Orientation="Horizontal">
-                <Button x:Name="submitButton" Content="Videre" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition"/>
+                <Button x:Name="SubmitButton" Content="Videre" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition"/>
                 <!--<Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" />-->
             </StackPanel>
         </StackPanel>

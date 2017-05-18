@@ -5,13 +5,13 @@ namespace CarDealerShip
 {
     public class SalgMasterViewModel
     {
-        public List<SalgViewModel> GetSalgItemviewmodelCollection(SalgKatalog katalog)
+        public List<SalgItemViewModel> GetSalgItemviewmodelCollection(SalgKatalog katalog)
         {
-            List<SalgViewModel> items = new List<SalgViewModel>();
+            List<SalgItemViewModel> items = new List<SalgItemViewModel>();
 
             foreach (Salg s in katalog.Salgs)
             {
-                items.Add(new SalgViewModel(s));
+                items.Add(new SalgItemViewModel(s));
             }
             return items;
         }

@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace CarDealerShip
 {
-    public class SalgViewModel : INotifyPropertyChanged
+    public class SalgItemViewModel : INotifyPropertyChanged
     {
         private Salg _domainobject;
 
-        public SalgViewModel(Salg s)
+        public SalgItemViewModel(Salg s)
         {
             _domainobject = s;
         }

@@ -8,30 +8,30 @@ namespace CarDealerShip
 {
     public class SalgMasterDetailsViewModel
     {
-        private SalgViewModel _SalgItemViewModelSelected;
-        private SalgMasterViewModel _SalgMasterViewModel;
+        private SalgItemViewModel _salgItemViewModelSelected;
+        private SalgMasterViewModel _salgMasterViewModel;
 
 
 
         public SalgMasterDetailsViewModel()
         {
-            _SalgMasterViewModel = new SalgMasterViewModel();
+            _salgMasterViewModel = new SalgMasterViewModel();
 
 
 
         }
 
-        public List<SalgViewModel> GetSalgItemviewmodelCollection
+        public List<SalgItemViewModel> GetSalgItemviewmodelCollection
         {
-            get { return _SalgMasterViewModel.GetSalgItemviewmodelCollection(SalgKatalog.Instance); }
+            get { return _salgMasterViewModel.GetSalgItemviewmodelCollection(SalgKatalog.Instance); }
         }
 
-        public SalgViewModel SalgItemViewModelSelected
+        public SalgItemViewModel SalgItemViewModelSelected
         {
-            get { return _SalgItemViewModelSelected; }
+            get { return _salgItemViewModelSelected; }
             set
             {
-                _SalgItemViewModelSelected = value;
+                _salgItemViewModelSelected = value;
                 OnPropertyChanged();
             }
         }
