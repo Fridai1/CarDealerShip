@@ -35,6 +35,5 @@ namespace CarDealerShip
             return _password.Equals(Password);
         }
 
-
     }
 }

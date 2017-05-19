@@ -47,5 +47,10 @@ namespace CarDealerShip
             _email = Email;
             _telofonNummer = TelefonNummer;
         }
+
+        public virtual Person Clone()
+        {
+            return (Person)MemberwiseClone();
+        }
     }
 }

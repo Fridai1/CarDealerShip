@@ -91,14 +91,31 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="ClassDiagram1.cd" />
     <None Include="project.json" />
-    <Compile Include="ViewModel\SalgMasterDetailsViewModel.cs" />
-    <Compile Include="ViewModel\SalgMasterViewModel.cs" />
-    <Compile Include="ViewModel\SalgItemViewModel.cs" />
-    <Compile Include="ViewModel\BilItemViewModel.cs" />
-    <Compile Include="ViewModel\BilMasterDetailsViewModel.cs" />
-    <Compile Include="ViewModel\BilMasterViewModel.cs" />
-    <Compile Include="ViewModel\KundeMasterViewModel.cs" />
-    <None Include="ViewModel\kundeitemvm" />
+    <Compile Include="AppConfig.cs" />
+    <Compile Include="ViewModelFactory.cs" />
+    <Compile Include="ViewModel\Base\CatalogBase.cs" />
+    <Compile Include="ViewModel\Base\CollectionBase.cs" />
+    <Compile Include="ViewModel\Base\DomainClassBase.cs" />
+    <Compile Include="PropertyDependencyManager.cs" />
+    <Compile Include="UserActionPresenter.cs" />
+    <Compile Include="ViewModel\Base\DetailsViewModelBase.cs" />
+    <Compile Include="ViewModel\Base\ItemViewModelBase.cs" />
+    <Compile Include="ViewModel\Base\MasterViewModelBase.cs" />
+    <Compile Include="ViewModel\Base\ViewModelFactoryBase.cs" />
+    <Compile Include="ViewModel\Base\MasterDetailsViewModelBase.cs" />
+    <Compile Include="ViewModel\Bil\BilDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Controllers\ControllerBase.cs" />
+    <Compile Include="ViewModel\Controllers\CreateControllerBase.cs" />
+    <Compile Include="ViewModel\Controllers\DeleteControllerBase.cs" />
+    <Compile Include="ViewModel\Controllers\UpdateControllerBase.cs" />
+    <Compile Include="ViewModel\Controllers\ViewControlState.cs" />
+    <Compile Include="ViewModel\Salg\SalgMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Salg\SalgMasterViewModel.cs" />
+    <Compile Include="ViewModel\Salg\SalgItemViewModel.cs" />
+    <Compile Include="ViewModel\Bil\BilItemViewModel.cs" />
+    <Compile Include="ViewModel\Bil\BilMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Bil\BilMasterViewModel.cs" />
+    <Compile Include="ViewModel\Kunde\KundeMasterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainLayer\Bil.cs" />
@@ -113,13 +130,14 @@
     <Compile Include="DomainLayer\SalgKatalog.cs" />
     <Compile Include="DomainLayer\Salg.cs" />
     <Compile Include="Properties\Annotations1.cs" />
-    <Compile Include="ViewModel\KundeItemViewModel.cs" />
-    <Compile Include="ViewModel\KundeMasterDetailsViewModel.cs" />
-    <Compile Include="ViewModel\OpretKundeViewModel.cs" />
-    <Compile Include="ViewModel\ProvisionItemViewModel.cs" />
-    <Compile Include="ViewModel\ProvisionMasterDetailsViewModel.cs" />
-    <Compile Include="ViewModel\ProvisionMasterViewModel.cs" />
-    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\Kunde\KundeItemViewModel.cs" />
+    <Compile Include="ViewModel\Kunde\KundeMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Kunde\OpretKundeViewModel.cs" />
+    <Compile Include="ViewModel\Provision\ProvisionItemViewModel.cs" />
+    <Compile Include="ViewModel\Provision\ProvisionMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Provision\ProvisionMasterViewModel.cs" />
+    <Compile Include="ViewModel\Controllers\RelayCommand.cs" />
+    <Compile Include="ViewModel\Controllers\ViewStateControlManager.cs" />
     <Compile Include="View\ProvisionView.xaml.cs">
       <DependentUpon>ProvisionView.xaml</DependentUpon>
     </Compile>
@@ -208,6 +226,9 @@
     <SDKReference Include="WindowsDesktop, Version=10.0.14393.0">
       <Name>Windows Desktop Extensions for the UWP</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModel\Medarbejder\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

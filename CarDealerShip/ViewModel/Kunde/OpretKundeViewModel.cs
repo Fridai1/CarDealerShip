@@ -37,6 +37,11 @@ namespace CarDealerShip
             set { _domainobject.TelefonNummer = value; }
         }
 
+        public void submit()
+        {
+            KundeKatalog.Instance.OpretKunde(_domainobject);
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

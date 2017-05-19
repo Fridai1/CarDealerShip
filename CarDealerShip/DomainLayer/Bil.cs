@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip
 {
-    public class Bil
+    public class Bil : DomainClassBase
     {
         private string _farve;
         private long _stelNr;
@@ -16,18 +16,19 @@ namespace CarDealerShip
         private double _price;
         private string _fabrikant;
         private string _model;
+        private string _photoID;
 
-        public Bil(string farve, long stelNr, bool ny, double motorStr, string type, double price, string fabrikant, string model)
-        {
-            _farve = farve;
-            _stelNr = stelNr;
-            _ny = ny;
-            _motorStr = motorStr;
-            _type = type;
-            _price = price;
-            _fabrikant = fabrikant;
-            _model = model;
-        }
+        //public Bil(string farve, long stelNr, bool ny, double motorStr, string type, double price, string fabrikant, string model)
+        //{
+        //    _farve = farve;
+        //    _stelNr = stelNr;
+        //    _ny = ny;
+        //    _motorStr = motorStr;
+        //    _type = type;
+        //    _price = price;
+        //    _fabrikant = fabrikant;
+        //    _model = model;
+        //}
 
         public string Farve
         {
@@ -75,6 +76,29 @@ namespace CarDealerShip
         {
             get { return _model; }
             set { _model = value; }
+        }
+
+        public string PhotoID
+        {
+            get { return _photoID; }
+            set { _photoID = value; }
+        }
+
+        public string ImageSource
+        {
+            get { return AppConfig.ImageFilePrefix + "bil\\" + PhotoID + AppConfig.ImageFilePostfix; }
+        }
+
+        public override void SetDefaultValues()
+        {
+            _farve = "sort";
+            _stelNr = 99999999;
+            _ny = true;
+            _motorStr = 2.0;
+            _type = "station car";
+            _price = 99999;
+            _fabrikant = "Skoda";
+            _model = "superb";
         }
     }
 }

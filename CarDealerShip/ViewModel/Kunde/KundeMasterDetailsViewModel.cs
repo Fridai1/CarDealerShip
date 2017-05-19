@@ -9,13 +9,17 @@ namespace CarDealerShip.ViewModel
     public class KundeMasterDetailsViewModel : INotifyPropertyChanged
     {
         private KundeItemViewModel _kundeItemViewModelSelected;
-        private KundeMasterViewModel _kundeMasterViewModel; 
+        private KundeMasterViewModel _kundeMasterViewModel;
+
 
 
         public KundeMasterDetailsViewModel()
         {
             _kundeMasterViewModel = new KundeMasterViewModel();
             _kundeItemViewModelSelected = null; 
+            
+            
+            
         }
 
         public List<KundeItemViewModel> KundeItemViewModelCollection
@@ -37,6 +41,14 @@ namespace CarDealerShip.ViewModel
         //{
         //    KundeKatalog.Instance.OpretKunde(_domainobject);
         //}
+
+        //private void submit(KundeItemViewModel k)
+        //{
+        //    KundeKatalog.Instance.OpretKunde(new Kunde(k.Navn, k.Adresse, k.Email, k.Telefon));
+        //}
+
+        
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

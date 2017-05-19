@@ -43,7 +43,9 @@
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock2" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Mærke:"/>
-                <TextBox x:Name="textBox1" SelectedText="{Binding BilItemViewModelSelected.Fabrikant}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox1" 
+                         
+                         Text="{Binding DetailsViewModel.Name, Mode=TwoWay}"  Margin="20" TextWrapping="Wrap"  Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock4" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
@@ -74,12 +76,15 @@
                 <TextBox x:Name="textBox5" SelectedText="{Binding BilItemViewModelSelected.StelNr}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="230" Margin="10,0" Orientation="Horizontal">
-                <Button x:Name="submitButton" Command="{Binding BilItemViewModelSelected}" Content="Submit" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition"/>
                 <!--<Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2"/>-->
             </StackPanel>
         </StackPanel>
         <StackPanel Margin="10" Grid.Row="1" Background="#FF858585" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Grid.Column="1">
-            <ListView x:Name="listView" ItemsSource="{Binding BilItemViewModelCollection}" SelectedItem="{Binding BilItemViewModelSelected}" Background="White" BorderThickness="0" Margin="20,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887">
+            <ListView
+                x:Name="listView" ItemsSource="{Binding ItemViewModelCollection}" 
+                SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}"
+                Visibility="{Binding ItemSelectorVisible}"
+                IsEnabled="{Binding ItemSelectorEnabled}" Background="Lavender"  >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
@@ -98,6 +103,50 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <StackPanel Grid.Row="1" Grid.Column="0"
+                        Orientation="Horizontal" BorderBrush="Black" BorderThickness="2,2,2,0">
+
+                <!--Create button-->
+                <Button Content="Create" 
+                        IsEnabled="{Binding ViewControlStates[Create].Enabled}"
+                        Visibility="{Binding ViewControlStates[Create].VisibilityState}"
+                        Command="{Binding CreateCommand}"/>
+
+                <!--Update button-->
+                <Button Content="Update" 
+                        IsEnabled="{Binding ViewControlStates[Update].Enabled}"
+                        Visibility="{Binding ViewControlStates[Update].VisibilityState}"
+                        Command="{Binding UpdateCommand}"/>
+
+                <!--Delete button-->
+                <Button Content="Delete" 
+                        IsEnabled="{Binding ViewControlStates[Delete].Enabled}"
+                        Visibility="{Binding ViewControlStates[Delete].VisibilityState}"
+                        Command="{Binding DeleteCommand}"/>
+
+                
+
+
+                   
+                    
+              
+
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" BorderBrush="Black" BorderThickness="2">
+
+                <RadioButton Content="Create" 
+                             Command="{Binding SelectCreateCommand}"/>
+
+                <RadioButton Content="Update" 
+                             Command="{Binding SelectUpdateCommand}"/>
+
+                <RadioButton Content="Delete" 
+                             Command="{Binding SelectDeleteCommand}"/>
+
+                <RadioButton Content="Read"  IsChecked="True" 
+                             Command="{Binding SelectReadCommand}"/>
+
+            </StackPanel>
         </StackPanel>
 
     </Grid>
