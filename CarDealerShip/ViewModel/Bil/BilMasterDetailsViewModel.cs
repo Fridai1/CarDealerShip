@@ -40,8 +40,8 @@ namespace CarDealerShip
             StateManager.AddNonFixedPropertiesDefaultStates(nonFixedKeyProperties);
             StateManager.AddButtonDefaultStates();
 
-            StateManager.AddViewControlState(new ViewControlState("ZipCodeFilter", "ZipCode below 3000"));
-            StateManager.AddViewControlState(new ViewControlState("BornFilter", "Born after 1990"));
+            //StateManager.AddViewControlState(new ViewControlState("ZipCodeFilter", "ZipCode below 3000"));
+            //StateManager.AddViewControlState(new ViewControlState("BornFilter", "Born after 1990"));
         }
 
         //public List<BilItemViewModel> BilItemViewModelCollection

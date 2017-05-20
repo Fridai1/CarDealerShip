@@ -59,21 +59,21 @@
                     <Run Text="Farve"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox3" SelectedText="{Binding BilItemViewModelSelected.Farve}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox3" IsEnabled="{Binding ViewControlStates[Farve].Enabled}" Visibility="{Binding ViewControlStates[Farve].VisibilityState}" Text="{Binding DetailsViewModel.Farve, Mode=TwoWay}" Margin="20" TextWrapping="Wrap"  Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock6" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Motorstørrelse"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox4" SelectedText="{Binding BilItemViewModelSelected.MotorStr}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox4" IsEnabled="{Binding ViewControlStates[MotorStr].Enabled}" Visibility="{Binding ViewControlStates[MotorStr].VisibilityState}" Text="{Binding DetailsViewModel.MotorStr, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock7" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Stel nummer"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox5" SelectedText="{Binding BilItemViewModelSelected.StelNr}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox5" IsEnabled="{Binding ViewControlStates[StelNr].Enabled}" Visibility="{Binding ViewControlStates[StelNr].VisibilityState}" Text="{Binding DetailsViewModel.StelNr, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="230" Margin="10,0" Orientation="Horizontal">
                 <!--<Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2"/>-->
@@ -90,13 +90,13 @@
                         <StackPanel>
                             <StackPanel>
                                 <StackPanel Margin="10,10,10,10">
-                                    <TextBlock FontSize="24" Text="{Binding Stand}"/>
-                                    <TextBlock FontSize="24" Text="{Binding Type}"/>
+                                    <TextBlock FontSize="24" Text="{Binding Description}"/>
+                                    <!--<TextBlock FontSize="24" Text="{Binding Type}"/>
                                     <TextBlock FontSize="24" Text="{Binding Fabrikant}"/>
                                     <TextBlock FontSize="24" Text="{Binding Model}"/>
                                     <TextBlock FontSize="24" Text="{Binding Farve}"/>
                                     <TextBlock FontSize="24" Text="{Binding MotorStr}"/>
-                                    <TextBlock FontSize="24" Text="{Binding StelNr}"/>
+                                    <TextBlock FontSize="24" Text="{Binding StelNr}"/>-->
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>

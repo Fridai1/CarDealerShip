@@ -6,7 +6,7 @@ namespace CarDealerShip
     {
         public override DetailsViewModelBase<Bil> CreateDetailsViewModel(Bil obj)
         {
-            return new BilDetailsViewModel.DetailsViewModel(obj);
+            return new BilDetailsViewModel(obj);
         }
 
         public override ItemViewModelBase<Bil> CreateItemViewModel(Bil obj)

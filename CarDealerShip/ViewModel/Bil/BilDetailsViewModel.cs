@@ -2,11 +2,13 @@
 
 namespace CarDealerShip
 {
-    public class BilDetailsViewModel
+    public class BilDetailsViewModel : DetailsViewModelBase<Bil>
     {
-        public class DetailsViewModel : DetailsViewModelBase<Bil>
+
+        public BilDetailsViewModel(Bil obj) : base(obj)
         {
-            public string Stand
+        }
+        public string Stand
             {
                 set
                 {
@@ -18,7 +20,8 @@ namespace CarDealerShip
                     {
                         DomainObject.Ny = false;
                     }
-                }
+                    OnPropertyChanged();
+            }
                 get
                 {
                     if (DomainObject.Ny)
@@ -27,7 +30,7 @@ namespace CarDealerShip
                     }
                     else
                     {
-                        return "False";
+                        return "brugt";
                     }
                 }
             }
@@ -37,7 +40,8 @@ namespace CarDealerShip
                 set
                 {
                     DomainObject.Type = value;
-                }
+                    OnPropertyChanged();
+            }
                 get
                 {
                     return DomainObject.Type;
@@ -49,7 +53,8 @@ namespace CarDealerShip
                 set
                 {
                     DomainObject.Model = value;
-                }
+                    OnPropertyChanged();
+            }
                 get
                 {
                     return DomainObject.Model;
@@ -61,7 +66,8 @@ namespace CarDealerShip
                 set
                 {
                     DomainObject.Farve = value;
-                }
+                    OnPropertyChanged();
+            }
                 get
                 {
                     return DomainObject.Farve;
@@ -73,7 +79,8 @@ namespace CarDealerShip
                 set
                 {
                     DomainObject.StelNr = value;
-                }
+                    OnPropertyChanged();
+            }
                 get
                 {
                     return DomainObject.StelNr;
@@ -85,7 +92,8 @@ namespace CarDealerShip
                 set
                 {
                     DomainObject.MotorStr = value;
-                }
+                    OnPropertyChanged();
+            }
                 get
                 {
                     return DomainObject.MotorStr;
@@ -98,16 +106,14 @@ namespace CarDealerShip
                 set
                 {
                     DomainObject.Fabrikant = value;
-                }
+                    OnPropertyChanged();
+            }
                 get
                 {
                     return DomainObject.Fabrikant;
                 }
             }
 
-            public DetailsViewModel(Bil obj) : base(obj)
-            {
-            }
+            
         }
     }
-}
