@@ -19,17 +19,22 @@ namespace CarDealerShip
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    /// </summary> 
     public sealed partial class OpretKundeView : Page
     {
         public OpretKundeView()
         {
-            this.InitializeComponent();
+            this.InitializeComponent(); 
         }
 
         private void submitButton_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void backToMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

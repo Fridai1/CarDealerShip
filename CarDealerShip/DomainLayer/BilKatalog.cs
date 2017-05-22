@@ -24,7 +24,7 @@ namespace CarDealerShip
         public BilKatalog()
         {
             _bilkatalog = new List<Bil>();
-            _instance = this;
+            
         }
 
         public List<Bil> GetBilKatalog()

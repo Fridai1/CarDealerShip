@@ -89,7 +89,15 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="ClassDiagram1.cd" />
     <None Include="project.json" />
+    <Compile Include="ViewModel\SalgMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\SalgMasterViewModel.cs" />
+    <Compile Include="ViewModel\SalgItemViewModel.cs" />
+    <Compile Include="ViewModel\BilItemViewModel.cs" />
+    <Compile Include="ViewModel\BilMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\BilMasterViewModel.cs" />
+    <Compile Include="ViewModel\KundeMasterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainLayer\Bil.cs" />
@@ -103,12 +111,9 @@
     <Compile Include="DomainLayer\Kundekatalog.cs" />
     <Compile Include="DomainLayer\SalgKatalog.cs" />
     <Compile Include="DomainLayer\Salg.cs" />
-    <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="test.cs" />
-    <Compile Include="ViewModel\BilMasterDetailsViewModel.cs" />
-    <Compile Include="ViewModel\BilMasterViewModel.cs" />
-    <Compile Include="ViewModel\BilItemViewModel.cs" />
+    <Compile Include="Properties\Annotations1.cs" />
     <Compile Include="ViewModel\KundeItemViewModel.cs" />
+    <Compile Include="ViewModel\KundeMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\OpretKundeViewModel.cs" />
     <Compile Include="ViewModel\ProvisionItemViewModel.cs" />
     <Compile Include="ViewModel\ProvisionMasterDetailsViewModel.cs" />
@@ -128,8 +133,8 @@
     <Compile Include="View\OpretKundeView.xaml.cs">
       <DependentUpon>OpretKundeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\OpretMedarbejderView.xaml.cs">
-      <DependentUpon>OpretMedarbejderView.xaml</DependentUpon>
+    <Compile Include="View\OpretSælgerView.xaml.cs">
+      <DependentUpon>OpretSælgerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="DomainLayer\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -181,7 +186,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\OpretMedarbejderView.xaml">
+    <Page Include="View\OpretSælgerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

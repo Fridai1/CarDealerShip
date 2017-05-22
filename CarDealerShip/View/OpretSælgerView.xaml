@@ -8,37 +8,45 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlock" Margin="336,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="365" SelectionChanged="textBlock_SelectionChanged">
+        <TextBlock x:Name="textBlock" Margin="336,10,0,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="292">
             <Run Text="Opret "/>
-            <Run Text="medarbejder"/>
+            <Run Text="sælger"/>
         </TextBlock>
-        <TextBlock x:Name="textBlock_Copy" Margin="0,15,332,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Right" Height="63" VerticalAlignment="Top" Width="292">
-            <Run Text="Sælger "/>
+        <TextBlock x:Name="textBlock_Copy" Margin="0,15,259,0" TextWrapping="Wrap" FontSize="36" TextAlignment="Center" HorizontalAlignment="Right" Height="63" VerticalAlignment="Top" Width="365">
+            <Run Text="Medarbejder"/>
+            <Run Text=" "/>
             <Run Text="katalog"/>
         </TextBlock>
         <StackPanel Margin="10,98,0,10" Background="#FF858585" HorizontalAlignment="Left" Width="943" d:LayoutOverrides="TopPosition, BottomPosition">
-            <StackPanel Height="98" Orientation="Horizontal"/>
-            <StackPanel Height="98" Orientation="Horizontal"/>
-            <StackPanel Height="98" Orientation="Horizontal"/>
-            <StackPanel Height="98" Orientation="Horizontal">
-                <TextBlock x:Name="textBlock4" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Navn:"/>
-                <TextBox x:Name="textBox2" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
-            </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal">
-                <TextBlock x:Name="textBlock5" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
-                    <Run Text="Adresse"/>
-                    <Run Text=":"/>
-                </TextBlock>
-                <TextBox x:Name="textBox3" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
-            </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal">
+            <StackPanel Height="98" Orientation="Horizontal" d:LayoutOverrides="TopPosition, BottomPosition">
                 <TextBlock x:Name="textBlock1" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Stilling:"/>
                 <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="450" Margin="20">
                     <ComboBoxItem x:Name="stillingChef" Content="Chef" Height="100" Width="100"/>
                     <ComboBoxItem x:Name="stillingSælger" Content="Sælger" Height="100" Width="100"/>
                 </ComboBox>
             </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal"/>
+            <StackPanel Height="98" Orientation="Horizontal">
+                <TextBlock x:Name="textBlock4_Copy1" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Navn:"/>
+                <TextBox x:Name="textBox2_Copy1" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+            </StackPanel>
+            <StackPanel Height="98" Orientation="Horizontal">
+                <TextBlock x:Name="textBlock4_Copy" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Adresse:"/>
+                <TextBox x:Name="textBox2_Copy" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+            </StackPanel>
+            <StackPanel Height="98" Orientation="Horizontal">
+                <TextBlock x:Name="textBlock4" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
+                    <Run Text="Telefon"/>
+                    <Run Text=":"/>
+                </TextBlock>
+                <TextBox x:Name="textBox2" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+            </StackPanel>
+            <StackPanel Height="98" Orientation="Horizontal">
+                <TextBlock x:Name="textBlock5" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
+                    <Run Text="Email"/>
+                    <Run Text=":"/>
+                </TextBlock>
+                <TextBox x:Name="textBox3" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+            </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal"/>
         </StackPanel>
         <StackPanel Margin="0,98,10,10" Background="#FF858585" HorizontalAlignment="Right" Width="937" d:LayoutOverrides="TopPosition, BottomPosition">
