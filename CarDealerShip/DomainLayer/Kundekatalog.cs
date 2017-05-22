@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CarDealerShip
 {
-    public class KundeKatalog
+    public class KundeKatalog : CatalogBase<Kunde>
     {
         private static KundeKatalog _instance = null;
 
@@ -18,7 +18,7 @@ namespace CarDealerShip
             }
         }
 
-        public KundeKatalog()
+        public KundeKatalog() : base (new CollectionBase<Kunde>())
         {
             _Kundelist = new List<Kunde>();
         }
