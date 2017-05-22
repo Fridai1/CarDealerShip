@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip.ViewModel.Medarbejder
 {
-    class MedarbejderMasterDetailsViewModel
+    public class MedarbejderMasterDetailsViewModel : MasterDetailsViewModelBase<CarDealerShip.Medarbejder>
     {
+        public MedarbejderMasterDetailsViewModel() : base()
     }
 }

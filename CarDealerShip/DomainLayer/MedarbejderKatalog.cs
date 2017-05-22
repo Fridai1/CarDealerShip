@@ -7,9 +7,28 @@ using Windows.ApplicationModel.Appointments.AppointmentsProvider;
 
 namespace CarDealerShip
 {
-    class MedarbejderKatalog
-    {
-        private List<Medarbejder> _list;
+   public class MedarbejderKatalog : CatalogBase<Medarbejder>
+   {
+        private static MedarbejderKatalog _instance = null;
+        private Dictionary<int, Medarbejder> _medarbejderkatalog;
+
+       public static BilKatalog Instance
+       {
+           get
+           {
+               if (_instance != null) return _instance;
+               _instance = new MedarbejderKatalog();
+               return _instance;
+           }
+        }
+
+       public MedarbejderKatalog() : base(new CollectionBase<Medarbejder>())
+       {
+           _medarbejderkatalog = new Dictionary<int, Medarbejder>();
+
+       }
+
+        /* private List<Medarbejder> _list;
 
         public MedarbejderKatalog()
         {
@@ -42,6 +61,10 @@ namespace CarDealerShip
         public void Delete(Medarbejder x) //fjerne medarbejder 
         {
             _list.Remove(x);
-        }
-    }
+        } */
+
+        public MedarbejderKatalog(CollectionBase<Medarbejder> collection) : base(collection)
+       {
+       }
+   }
 }

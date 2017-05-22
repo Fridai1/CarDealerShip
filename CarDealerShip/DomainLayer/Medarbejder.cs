@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip
 {
-    class Medarbejder: Person
+    public class Medarbejder: Person
     {
         private int _id;
         private string _password;
@@ -15,9 +15,7 @@ namespace CarDealerShip
         public int Id
         {
             get { return _id; }
-            set
-            {
-            }
+            set {}
         }
 
         public string Password
