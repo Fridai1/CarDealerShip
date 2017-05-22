@@ -91,6 +91,9 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="ClassDiagram1.cd" />
     <None Include="project.json" />
+    <Compile Include="ViewModel\OpretMedarbejderItemViewModel.cs" />
+    <Compile Include="ViewModel\OpretMedarbejderMasterdetailsViewModel.cs" />
+    <Compile Include="ViewModel\OpretMedarbejderMasterViewModel.cs" />
     <Compile Include="ViewModel\SalgMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\SalgMasterViewModel.cs" />
     <Compile Include="ViewModel\SalgItemViewModel.cs" />
@@ -134,8 +137,8 @@
     <Compile Include="View\OpretKundeView.xaml.cs">
       <DependentUpon>OpretKundeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\OpretSælgerView.xaml.cs">
-      <DependentUpon>OpretSælgerView.xaml</DependentUpon>
+    <Compile Include="View\OpretMedarbejderView.xaml.cs">
+      <DependentUpon>OpretMedarbejderView.xaml</DependentUpon>
     </Compile>
     <Compile Include="DomainLayer\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -187,7 +190,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\OpretSælgerView.xaml">
+    <Page Include="View\OpretMedarbejderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -7,7 +7,7 @@ using Windows.ApplicationModel.Appointments.AppointmentsProvider;
 
 namespace CarDealerShip
 {
-    class MedarbejderKatalog
+    public class MedarbejderKatalog
     {
         private List<Medarbejder> _list;
 
