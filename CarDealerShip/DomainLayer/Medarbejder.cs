@@ -10,6 +10,7 @@ namespace CarDealerShip
     {
         private int _id;
         private string _password;
+        private bool _Chef;
 
         public int Id
         {
@@ -33,6 +34,12 @@ namespace CarDealerShip
         public bool ValidatePassword(string Password) //tjekker om Password parameter er lig med instans værdien
         {
             return _password.Equals(Password);
+        }
+
+        public bool Chef
+        {
+            get { return _Chef; }
+            set { _Chef = value; }
         }
 
     }
