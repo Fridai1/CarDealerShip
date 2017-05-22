@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip 
 {
-    public class Person
+    public class Person : DomainClassBase
     {
         private string _navn;
         private string _addresse;
@@ -51,6 +51,14 @@ namespace CarDealerShip
         public virtual Person Clone()
         {
             return (Person)MemberwiseClone();
+        }
+
+        public override void SetDefaultValues()
+        {
+            _navn = "Navn";
+            _addresse = "Addresse";
+            _email = "Email";
+            _telofonNummer = 12345678;
         }
     }
 }
