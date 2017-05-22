@@ -48,11 +48,9 @@ namespace CarDealerShip
         public void OpretBil(Bil bil)
         {
             //test kode
-            var test = (from item in _bilkatalog where item.StelNr == bil.StelNr select item).SingleOrDefault();
+            //var test = (from item in _bilkatalog where item.StelNr == bil.StelNr select item).SingleOrDefault();
 
-            if (test != null)
-                _bilkatalog.Remove(test);
-            //
+           
 
 
             _bilkatalog.Add(bil);

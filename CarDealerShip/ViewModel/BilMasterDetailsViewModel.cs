@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using CarDealerShip.Annotations;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace CarDealerShip
 {
@@ -19,6 +20,7 @@ namespace CarDealerShip
         {
             _bilItemViewModelSelected = null;
             _bilMasterViewModel = new BilMasterViewModel();
+            _opretbil = new RelayCommand(opretbil(), altidsand );
         }
 
         public List<BilItemViewModel> BilItemViewModelCollection
@@ -39,5 +41,23 @@ namespace CarDealerShip
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public void doopret()
+        {
+            opretbil();
+        }
+        
+
+        public void opretbil(BilItemViewModel bil)
+        {
+            BilKatalog.Instance.OpretBil(new Bil(bil.Farve, bil.StelNr, bil.Stand, bil.MotorStr, bil.Type, bil.price, bil.Fabrikant, bil.Model));
+        }
+
+        public bool altidsand()
+        {
+            return true;
+        }
+
+        
     }
 }

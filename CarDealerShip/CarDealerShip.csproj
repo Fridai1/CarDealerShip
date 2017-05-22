@@ -101,7 +101,6 @@
     <Compile Include="ViewModel\BilMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\BilMasterViewModel.cs" />
     <Compile Include="ViewModel\KundeMasterViewModel.cs" />
-    <None Include="ViewModel\kundeitemvm" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainLayer\Bil.cs" />

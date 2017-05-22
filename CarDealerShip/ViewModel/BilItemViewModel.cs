@@ -20,30 +20,31 @@ namespace CarDealerShip
             _domainObject = b;
         }
         
-        public string Stand
+        public bool Stand
         {
-            set
-            {
-                if(value == "Ny")
-                {
-                    _domainObject.Ny = true;
-                }
-                else
-                {
-                    _domainObject.Ny = false;
-                }
-            }
-            get
-            {
-                if (_domainObject.Ny)
-                {
-                    return "Ny";
-                }
-                else
-                {
-                    return "False";
-                }
-            }
+            //set
+            //{
+            //    if(value == "Ny")
+            //    {
+            //        _domainObject.Ny = true;
+            //    }
+            //    else
+            //    {
+            //        _domainObject.Ny = false;
+            //    }
+            //}
+            //get
+            //{
+            //    if (_domainObject.Ny)
+            //    {
+            //        return "Ny";
+            //    }
+            //    else
+            //    {
+            //        return "False";
+            //    }
+            //}
+            get { return true; }
         }
 
         public string Type
@@ -119,10 +120,13 @@ namespace CarDealerShip
             }
         }
 
-        public void SubmitCar()
+        public double price
         {
-            BilKatalog.Instance.OpretBil(_domainObject);
+            get { return _domainObject.Price; }
+            set { _domainObject.Price = value; }
         }
+
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
 
