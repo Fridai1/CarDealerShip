@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using CarDealerShip.ViewModel.Base;
+using CarDealerShip;
 
 namespace CarDealerShip.ViewModel.Kunde
 {
@@ -17,7 +18,7 @@ namespace CarDealerShip.ViewModel.Kunde
             get { return 24; }
         }
 
-        public KundeItemViewModel(Kunde obj) : base(obj)
+        public KundeItemViewModel(CarDealerShip.Kunde obj) : base(obj)
         {  
         }
 
