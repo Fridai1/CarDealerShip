@@ -1,18 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using CarDealerShip.ViewModel.Base;
 
-namespace CarDealerShip.ViewModel
+namespace CarDealerShip.ViewModel.Kunde
 {
-    public class KundeMasterViewModel
+    public class KundeMasterViewModel : MasterViewModelBase<CarDealerShip.Kunde>
     {
-        public List<KundeItemViewModel> GetOpretKundeviewmodelCollection(KundeKatalog katalog)
+        public KundeMasterViewModel()
         {
-            List<KundeItemViewModel> items = new List<KundeItemViewModel>();
-
-            foreach (Kunde k in katalog.GetKundeList) 
-            {
-                items.Add(new KundeItemViewModel(k));
-            }
-            return items;
         }
     }
+    
 }

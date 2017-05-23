@@ -1,48 +1,31 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using CarDealerShip.ViewModel.Base;
 
-namespace CarDealerShip.ViewModel
+namespace CarDealerShip.ViewModel.Kunde
 {
-    public class KundeItemViewModel : INotifyPropertyChanged
+    public class KundeItemViewModel : ItemViewModelBase<CarDealerShip.Kunde>
     {
-        private Kunde _domainobject;
 
-        public KundeItemViewModel(Kunde k)
+        public override string Description
         {
-            _domainobject = k;
+            get { return DomainObject.Navn + DomainObject.Addresse + DomainObject.Email + DomainObject.TelefonNummer; }
         }
 
-        public string Navn
+        public override int FontSize
         {
-            get { return _domainobject.Navn; }  
-            set { _domainobject.Navn = value; }
+            get { return 24; }
         }
 
-        public string Adresse
+        public KundeItemViewModel(CarDealerShip.Kunde obj) : base(obj)
         {
-            get { return _domainobject.Addresse; }
-            set { _domainobject.Addresse = value; }
-        }
-
-        public string Email
-        {
-            get { return _domainobject.Email; }
-            set { _domainobject.Email = value; }
+            
             
         }
 
-        public long Telefon
-        {
-            get { return _domainobject.TelefonNummer; }
-            set { _domainobject.TelefonNummer = value; }
+       
             
-        }
-
-        public void submit()
-        {
-            KundeKatalog.Instance.OpretKunde(new Kunde(_domainobject.Navn, _domainobject.Addresse, _domainobject.Email, _domainobject.TelefonNummer));
-        }
-
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
 

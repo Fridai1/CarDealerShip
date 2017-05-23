@@ -36,7 +36,7 @@
                     <Run Text=":"/>
                 </TextBlock>
                 <ComboBox x:Name="comboBox1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="450" Margin="20">
-                    <ComboBoxItem x:Name="typeBilRV" Content="RV" Height="100" Width="100"/>
+                    <ComboBoxItem x:Name="typeBilRV"  Content="RV" Height="100" Width="100"/>
                     <ComboBoxItem x:Name="typeBilSport" Content="Sport" Height="100" Width="100"/>
                     <ComboBoxItem x:Name="typeBilFamilie" Content="Familie" Height="100" Width="100"/>
                 </ComboBox>
@@ -75,6 +75,16 @@
                 </TextBlock>
                 <TextBox x:Name="textBox5" IsEnabled="{Binding ViewControlStates[StelNr].Enabled}" Visibility="{Binding ViewControlStates[StelNr].VisibilityState}" Text="{Binding DetailsViewModel.StelNr, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock 
+                    Width="414" FontSize="24"         Text="Photo ID"/>
+                <!--<TextBox
+                    IsEnabled="{Binding ViewControlStates[PhotoID].Enabled}"
+                    Visibility="{Binding ViewControlStates[PhotoID].VisibilityState}"
+                         Text="{Binding DetailsViewModel.PhotoID, Mode=TwoWay}" />-->
+            </StackPanel>
+            
+
             <StackPanel Height="230" Margin="10,0" Orientation="Horizontal">
                 <!--<Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2"/>-->
             </StackPanel>
