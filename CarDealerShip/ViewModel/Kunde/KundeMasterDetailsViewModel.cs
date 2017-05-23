@@ -3,59 +3,34 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using CarDealerShip.Annotations;
+using CarDealerShip.ViewModel;
 
-namespace CarDealerShip.ViewModel
+
+namespace CarDealerShip
 {
-    public class KundeMasterDetailsViewModel : INotifyPropertyChanged
+    public class KundeMasterDetailsViewModel : MasterDetailsViewModelBase<Kunde>
     {
-        private KundeItemViewModel _kundeItemViewModelSelected;
-        private KundeMasterViewModel _kundeMasterViewModel;
 
-
-
-        public KundeMasterDetailsViewModel()
+        public KundeMasterDetailsViewModel() : base(new KundeViewModelFactory(), KundeKatalog.Instance)
         {
-            _kundeMasterViewModel = new KundeMasterViewModel();
-            _kundeItemViewModelSelected = null; 
             
             
+
+            List<string> fixedProperties = new List<string>();
+            // Add names of "fixed" (cannot be changed after creation) properties here
+            fixedProperties.Add(nameof(Kunde.TelefonNummer));
+
+            List<string> nonFixedKeyProperties = new List<string>();
+            // Add names of "non-fixed" (can be changed after creation) properties here
+            nonFixedKeyProperties.Add(nameof(Kunde.Navn));
+            nonFixedKeyProperties.Add(nameof(Kunde.Addresse));
+            nonFixedKeyProperties.Add(nameof(Kunde.Email));
             
-        }
 
-        public List<KundeItemViewModel> KundeItemViewModelCollection
-        {
-            get { return _kundeMasterViewModel.GetOpretKundeviewmodelCollection(KundeKatalog.Instance); }
-        }
+            StateManager.AddFixedPropertiesDefaultStates(fixedProperties);
+            StateManager.AddNonFixedPropertiesDefaultStates(nonFixedKeyProperties);
+            StateManager.AddButtonDefaultStates();
 
-        public KundeItemViewModel KundeItemViewModelSelected
-        {
-            get { return _kundeItemViewModelSelected; }
-            set
-            {
-                _kundeItemViewModelSelected = value;
-                OnPropertyChanged();
-            }
-        }
-
-        //public void SubmitKunde()
-        //{
-        //    KundeKatalog.Instance.OpretKunde(_domainobject);
-        //}
-
-        //private void submit(KundeItemViewModel k)
-        //{
-        //    KundeKatalog.Instance.OpretKunde(new Kunde(k.Navn, k.Adresse, k.Email, k.Telefon));
-        //}
-
-        
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
