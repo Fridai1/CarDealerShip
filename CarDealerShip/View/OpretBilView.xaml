@@ -45,7 +45,7 @@
                 <TextBlock x:Name="textBlock2" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Mærke:"/>
                 <TextBox x:Name="textBox1" 
                          
-                         IsEnabled="{Binding ViewControlStates[Fabrikant].Enabled}" Visibility="{Binding ViewControlStates[Fabrikant].VisibilityState}" Text="{Binding DetailsViewModel.Fabrikant, Mode=TwoWay}"  Margin="20" TextWrapping="Wrap"  Width="450" FontSize="24"/>
+                         IsEnabled="{Binding ViewControlStates[Fabrikant].Enabled}" Visibility="{Binding ViewControlStates[Fabrikant].VisibilityState}" Text="{Binding DetailsViewModel.Fabrikant, Mode=TwoWay}"  Margin="20" TextWrapping="Wrap"  Width="450" FontSize="24" TextChanged="textBox1_TextChanged"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock4" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">

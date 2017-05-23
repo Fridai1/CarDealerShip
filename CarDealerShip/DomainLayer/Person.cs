@@ -10,7 +10,7 @@ namespace CarDealerShip
     public class Person : DomainClassBase
     {
         private string _navn;
-        private string _addresse;
+        private string _adresse;
         private string _email;
         private long _telofonNummer;
 
@@ -20,10 +20,10 @@ namespace CarDealerShip
             set { _navn = value; }
         }
 
-        public string Addresse
+        public string Adresse
         {
-            get { return _addresse; }
-            set { _addresse = value; }
+            get { return _adresse; }
+            set { _adresse = value; }
         }
 
         public string Email
@@ -56,7 +56,7 @@ namespace CarDealerShip
         public override void SetDefaultValues()
         {
             _navn = "Navn";
-            _addresse = "Addresse";
+            _adresse = "Adresse";
             _email = "Email";
             _telofonNummer = 12345678;
         }
