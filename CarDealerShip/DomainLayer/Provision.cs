@@ -8,7 +8,7 @@ namespace CarDealerShip
     {
         private double _Provision;
 
-       
+        private int _value;
         private int _id;
         private double _solgt;
         public Provision(int id)
@@ -17,7 +17,7 @@ namespace CarDealerShip
 
             
             _id = id;
-            //_solgt = SalgKatalog.Instance.GetTotalSalg(_id);
+            _solgt = SalgKatalog.Instance.GetTotalSalg(_id);
 
 
 
@@ -32,16 +32,16 @@ namespace CarDealerShip
             if (_solgt >= 1 || _solgt <= 99999)
             {
                 _Provision = _solgt * 1.05 - _solgt;
-                //_value = 1;
+                _value = 1;
             }
             else if (_solgt >= 100000 || _solgt < 200000)
             {
-                //_value = 2;
+                _value = 2;
                 _Provision = _solgt * 1.07 - _solgt;
             }
             else if (_solgt > 200000)
             {
-                //_value = 3;
+                _value = 3;
                 _Provision = _solgt * 1.10 - _solgt;
             }
         }
@@ -68,39 +68,40 @@ namespace CarDealerShip
                 return _Provision;
             }
         }
-        //public double Getprovision => _Provision;
+        public double Getprovision => _Provision;
 
-        //public int getID
-        //{
-        //    get { return SalgKatalog.Instance.GetIdSalg(_id); }
-        //}
+        public int getID
+        {
+            get { return SalgKatalog.Instance.GetIdSalg(_id); }
+        }
 
         public double GetTotalSolgt
         {
             get { return _solgt; }
         }
 
-        //public double GetProvision
-        //{
-        //    get {
-        //        switch (_value)
-        //        {
-        //            case 1:
-        //                _Provision = _solgt * 1.05;
-        //                break;
+        public double GetProvision
+        {
+            get
+            {
+                switch (_value)
+                {
+                    case 1:
+                        _Provision = _solgt * 1.05;
+                        break;
 
-        //            case 2:
-        //                 _Provision = _solgt * 1.05;
-        //                break;
+                    case 2:
+                        _Provision = _solgt * 1.05;
+                        break;
 
-        //            case 3:
-        //                _Provision = _solgt * 1.10;
-        //                break;
+                    case 3:
+                        _Provision = _solgt * 1.10;
+                        break;
 
-        //        }
-        //        return _Provision;
-        //    }
-        //}
+                }
+                return _Provision;
+            }
+        }
 
 
 
