@@ -9,7 +9,7 @@ namespace CarDealerShip
 {
     public class SalgMasterDetailsViewModel : MasterDetailsViewModelBase<Salg>
     {
-        public SalgMasterDetailsViewModel() : base(new ViewModelFactory(), SalgKatalog.Instance)
+        public SalgMasterDetailsViewModel() : base(new ViewModelFactorySalg(), SalgKatalog.Instance)
         {
             List<string> fixedProperties = new List<string>();
             fixedProperties.Add(nameof(Salg.ID));
