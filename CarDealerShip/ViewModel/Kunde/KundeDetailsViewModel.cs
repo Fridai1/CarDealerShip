@@ -24,10 +24,10 @@ namespace CarDealerShip
         {
             set
             {
-                DomainObject.Addresse = value;
+                DomainObject.Adresse = value;
                 OnPropertyChanged();
             }
-            get { return DomainObject.Addresse; }
+            get { return DomainObject.Adresse; }
         }
 
         public string Email

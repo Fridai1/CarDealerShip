@@ -10,7 +10,7 @@ namespace CarDealerShip
 
         public override string Description
         {
-            get { return DomainObject.Navn + DomainObject.Addresse + DomainObject.Email + DomainObject.TelefonNummer; }
+            get { return DomainObject.Navn + DomainObject.Adresse + DomainObject.Email + DomainObject.TelefonNummer; }
         }
 
         public override int FontSize
@@ -19,17 +19,7 @@ namespace CarDealerShip
         }
 
         public KundeItemViewModel(Kunde obj) : base(obj)
-        {
-            get { return _domainobject.Email; }
-            set { _domainobject.Email = value; }
-            
-        }
-
-        public long Telefon
-        {
-            get { return _domainobject.TelefonNummer; }
-            set { _domainobject.TelefonNummer = value; }
-            
+        {  
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

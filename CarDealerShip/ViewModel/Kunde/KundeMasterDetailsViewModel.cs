@@ -23,7 +23,7 @@ namespace CarDealerShip
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) properties here
             nonFixedKeyProperties.Add(nameof(Kunde.Navn));
-            nonFixedKeyProperties.Add(nameof(Kunde.Addresse));
+            nonFixedKeyProperties.Add(nameof(Kunde.Adresse));
             nonFixedKeyProperties.Add(nameof(Kunde.Email));
             
 
