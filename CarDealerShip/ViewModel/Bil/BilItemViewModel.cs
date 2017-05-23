@@ -17,7 +17,7 @@ namespace CarDealerShip
         
             public override string Description
             {
-                get { return DomainObject.StelNr + " from " + DomainObject.Model; }
+                get { return "Mærke: "+ DomainObject.Fabrikant + " - Model: "+DomainObject.Model + " - StelNr: " + DomainObject.StelNr; }
             }
 
             public override int FontSize
@@ -30,7 +30,11 @@ namespace CarDealerShip
                 get { return DomainObject.ImageSource; }
             }
 
-            public BilItemViewModel(Bil obj) : base(obj)
+        public override int ImageSize
+        {
+            get { return 60; }
+        }
+        public BilItemViewModel(Bil obj) : base(obj)
                     {
                     }
            

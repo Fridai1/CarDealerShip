@@ -86,7 +86,7 @@ namespace CarDealerShip
 
         public string ImageSource
         {
-            get { return AppConfig.ImageFilePrefix + "bil\\" + PhotoID + AppConfig.ImageFilePostfix; }
+            get { return AppConfig.ImageFilePrefix + "Bil\\" + PhotoID + AppConfig.ImageFilePostfix; }
         }
 
         public override void SetDefaultValues()
@@ -99,6 +99,7 @@ namespace CarDealerShip
             _price = 99999;
             _fabrikant = "Skoda";
             _model = "superb";
+            _photoID = "bmw";
         }
     }
 }
