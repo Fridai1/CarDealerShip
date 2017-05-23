@@ -109,6 +109,12 @@
     <Compile Include="ViewModel\Controllers\DeleteControllerBase.cs" />
     <Compile Include="ViewModel\Controllers\UpdateControllerBase.cs" />
     <Compile Include="ViewModel\Controllers\ViewControlState.cs" />
+    <Compile Include="ViewModel\Kunde\KundeViewModelFactory.cs" />
+    <Compile Include="ViewModel\Medarbejder\MedarbejderDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Medarbejder\MedarbejderItemViewModel.cs" />
+    <Compile Include="ViewModel\Medarbejder\MedarbejderMasterDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Medarbejder\MedarbejderMasterViewModel.cs" />
+    <Compile Include="ViewModel\Medarbejder\MedarbejderViewModelFactory.cs" />
     <Compile Include="ViewModel\Salg\SalgMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\Salg\SalgMasterViewModel.cs" />
     <Compile Include="ViewModel\Salg\SalgItemViewModel.cs" />
@@ -130,9 +136,9 @@
     <Compile Include="DomainLayer\SalgKatalog.cs" />
     <Compile Include="DomainLayer\Salg.cs" />
     <Compile Include="Properties\Annotations1.cs" />
-    <Compile Include="ViewModel\Kunde\KundeItemViewModel.cs" />
+    <Compile Include="ViewModel\Kunde\KundeDetailsViewModel.cs" />
     <Compile Include="ViewModel\Kunde\KundeMasterDetailsViewModel.cs" />
-    <Compile Include="ViewModel\Kunde\OpretKundeViewModel.cs" />
+    <Compile Include="ViewModel\Kunde\KundeItemViewModel.cs" />
     <Compile Include="ViewModel\Provision\ProvisionItemViewModel.cs" />
     <Compile Include="ViewModel\Provision\ProvisionMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\Provision\ProvisionMasterViewModel.cs" />
@@ -228,9 +234,7 @@
       <Name>Windows Desktop Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\Medarbejder\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
