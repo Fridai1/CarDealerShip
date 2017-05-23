@@ -114,6 +114,7 @@
     <Compile Include="ViewModel\Medarbejder\MedarbejderItemViewModel.cs" />
     <Compile Include="ViewModel\Medarbejder\MedarbejderMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\Medarbejder\MedarbejderMasterViewModel.cs" />
+    <Compile Include="ViewModel\Medarbejder\MedarbejderViewModelFactory.cs" />
     <Compile Include="ViewModel\Salg\SalgMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\Salg\SalgMasterViewModel.cs" />
     <Compile Include="ViewModel\Salg\SalgItemViewModel.cs" />
