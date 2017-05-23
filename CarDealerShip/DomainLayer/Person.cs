@@ -48,10 +48,7 @@ namespace CarDealerShip
         //    _telofonNummer = TelefonNummer;
         //}
 
-        public virtual Person Clone()
-        {
-            return (Person)MemberwiseClone();
-        }
+        
 
         public override void SetDefaultValues()
         {

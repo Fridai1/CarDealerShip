@@ -14,7 +14,7 @@ namespace CarDealerShip.ViewModel.Medarbejder
         {
         }
 
-        public string Stilling; // er ikke færdig
+        public string Stilling; // er ikke færdig boooo
 
         public string Navn
         {

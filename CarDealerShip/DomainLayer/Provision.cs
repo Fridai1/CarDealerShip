@@ -17,7 +17,7 @@ namespace CarDealerShip
 
             
             _id = id;
-            _solgt = SalgKatalog.Instance.GetTotalSalg(_id);
+            //_solgt = SalgKatalog.Instance.GetTotalSalg(_id);
 
 
 
@@ -70,10 +70,10 @@ namespace CarDealerShip
         }
         //public double Getprovision => _Provision;
 
-        public int getID
-        {
-            get { return SalgKatalog.Instance.GetIdSalg(_id); }
-        }
+        //public int getID
+        //{
+        //    get { return SalgKatalog.Instance.GetIdSalg(_id); }
+        //}
 
         public double GetTotalSolgt
         {
