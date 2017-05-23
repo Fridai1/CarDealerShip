@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using CarDealerShip.Annotations;
 using CarDealerShip.ViewModel.Base;
 
-namespace CarDealerShip
+namespace CarDealerShip.ViewModel.Kunde
 {
-    public class KundeItemViewModel : ItemViewModelBase<Kunde>
+    public class KundeItemViewModel : ItemViewModelBase<CarDealerShip.Kunde>
     {
 
         public override string Description
@@ -18,7 +17,7 @@ namespace CarDealerShip
             get { return 24; }
         }
 
-        public KundeItemViewModel(Kunde obj) : base(obj)
+        public KundeItemViewModel(CarDealerShip.Kunde obj) : base(obj)
         {
             
             

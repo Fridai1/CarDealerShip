@@ -1,14 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
-using CarDealerShip.Annotations;
-using CarDealerShip.ViewModel;
 
-
-namespace CarDealerShip
+namespace CarDealerShip.ViewModel.Kunde
 {
-    public class KundeMasterDetailsViewModel : MasterDetailsViewModelBase<Kunde>
+    public class KundeMasterDetailsViewModel : MasterDetailsViewModelBase<CarDealerShip.Kunde>
     {
 
         public KundeMasterDetailsViewModel() : base(new KundeViewModelFactory(), KundeKatalog.Instance)
@@ -18,13 +12,13 @@ namespace CarDealerShip
 
             List<string> fixedProperties = new List<string>();
             // Add names of "fixed" (cannot be changed after creation) properties here
-            fixedProperties.Add(nameof(Kunde.TelefonNummer));
+            fixedProperties.Add(nameof(CarDealerShip.Kunde.TelefonNummer));
 
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) properties here
-            nonFixedKeyProperties.Add(nameof(Kunde.Navn));
-            nonFixedKeyProperties.Add(nameof(Kunde.Addresse));
-            nonFixedKeyProperties.Add(nameof(Kunde.Email));
+            nonFixedKeyProperties.Add(nameof(CarDealerShip.Kunde.Navn));
+            nonFixedKeyProperties.Add(nameof(CarDealerShip.Kunde.Addresse));
+            nonFixedKeyProperties.Add(nameof(CarDealerShip.Kunde.Email));
             
 
             StateManager.AddFixedPropertiesDefaultStates(fixedProperties);

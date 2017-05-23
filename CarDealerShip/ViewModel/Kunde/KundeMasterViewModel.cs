@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using CarDealerShip.ViewModel.Base;
+﻿using CarDealerShip.ViewModel.Base;
 
-namespace CarDealerShip
+namespace CarDealerShip.ViewModel.Kunde
 {
-    public class KundeMasterViewModel : MasterViewModelBase<Kunde>
+    public class KundeMasterViewModel : MasterViewModelBase<CarDealerShip.Kunde>
     {
         public KundeMasterViewModel()
         {

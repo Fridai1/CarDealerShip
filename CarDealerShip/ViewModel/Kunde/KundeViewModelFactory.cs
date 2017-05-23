@@ -1,22 +1,22 @@
 ﻿using CarDealerShip.ViewModel.Base;
 
-namespace CarDealerShip
+namespace CarDealerShip.ViewModel.Kunde
     {
-        class KundeViewModelFactory : ViewModelFactoryBase<Kunde>
+        class KundeViewModelFactory : ViewModelFactoryBase<CarDealerShip.Kunde>
         {
-            public override DetailsViewModelBase<Kunde> CreateDetailsViewModel(
-                Kunde obj)
+            public override DetailsViewModelBase<CarDealerShip.Kunde> CreateDetailsViewModel(
+                CarDealerShip.Kunde obj)
             {
                 return new KundeDetailsViewModel(obj);
 
             }
 
-            public override ItemViewModelBase<Kunde> CreateItemViewModel(Kunde obj)
+            public override ItemViewModelBase<CarDealerShip.Kunde> CreateItemViewModel(CarDealerShip.Kunde obj)
             {
                 return new KundeItemViewModel(obj);
             }
 
-            public override MasterViewModelBase<Kunde> CreateMasterViewModel()
+            public override MasterViewModelBase<CarDealerShip.Kunde> CreateMasterViewModel()
             {
                 return new KundeMasterViewModel();
             }
