@@ -12,7 +12,7 @@ namespace CarDealerShip
         private static MedarbejderKatalog _instance = null;
         private Dictionary<int, Medarbejder> _medarbejderkatalog;
 
-       public static BilKatalog Instance
+       public static MedarbejderKatalog Instance
        {
            get
            {
