@@ -92,7 +92,9 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="project.json" />
     <Compile Include="AppConfig.cs" />
+    <Compile Include="ViewModel\Salg\SalgDetailsViewModel.cs" />
     <Compile Include="ViewModelFactory.cs" />
+    <Compile Include="ViewModel\Salg\ViewModelFactorySalg.cs" />
     <Compile Include="ViewModel\Base\CatalogBase.cs" />
     <Compile Include="ViewModel\Base\CollectionBase.cs" />
     <Compile Include="ViewModel\Base\DomainClassBase.cs" />

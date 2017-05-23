@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace CarDealerShip.DomainLayer
 {
-    public class SalgKatalog
+    public class SalgKatalog : CatalogBase<Salg>
     {
 
         private static SalgKatalog _instance = null;
-        private List<Salg> _salgKatalog;
+        private Dictionary<int, Salg> _bilkatalog;
 
         public static SalgKatalog Instance
         {
@@ -19,55 +19,56 @@ namespace CarDealerShip.DomainLayer
             }
         }
 
-        public SalgKatalog()
+        public SalgKatalog() : base(new CollectionBase<Salg>())
         {
-            _salgKatalog = new List<Salg>();
-        }
-        
+            _bilkatalog = new Dictionary<int, Salg>();
 
-       
-
-        public  List<Salg> Salgs { get { return _salgKatalog.ToList(); } }
-
-        public  double GetTotalSalg(int id)
-        {
-            int i = 0;
-            double value = 0;
-
-            while (i < _salgKatalog.Count)
-            {
-                if (_salgKatalog[i].ID == id)
-                {
-                    double plus = _salgKatalog[i].Price;
-                    value = plus + value;
-                }
-                i++;
-            }
-            return value;
         }
 
 
 
-        public int GetIdSalg(int id)
-        {
-            int i = 0;
 
-            while (i < _salgKatalog.Count)
-            {
-                if (_salgKatalog[i].ID == id)
-                {
-                    return _salgKatalog[i].ID;
-                }
-                i++;
-            }
-            return 0;
-        }
+        //public  List<Salg> Salgs { get { return _salgKatalog.ToList(); } }
+
+        //public  double GetTotalSalg(int id)
+        //{
+        //    int i = 0;
+        //    double value = 0;
+
+        //    while (i < _salgKatalog.Count)
+        //    {
+        //        if (_salgKatalog[i].ID == id)
+        //        {
+        //            double plus = _salgKatalog[i].Price;
+        //            value = plus + value;
+        //        }
+        //        i++;
+        //    }
+        //    return value;
+        //}
 
 
-        public  void OpretSalg(Salg salg)
-        {
-            _salgKatalog.Add(salg);
 
-        }
+        //public int GetIdSalg(int id)
+        //{
+        //    int i = 0;
+
+        //    while (i < _salgKatalog.Count)
+        //    {
+        //        if (_salgKatalog[i].ID == id)
+        //        {
+        //            return _salgKatalog[i].ID;
+        //        }
+        //        i++;
+        //    }
+        //    return 0;
+        //}
+
+
+        //public  void OpretSalg(Salg salg)
+        //{
+        //    _salgKatalog.Add(salg);
+
+        //}
     }
 }

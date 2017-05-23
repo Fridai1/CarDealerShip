@@ -3,53 +3,20 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using CarDealerShip.Annotations;
 using CarDealerShip.DomainLayer;
+using CarDealerShip.ViewModel;
 
 namespace CarDealerShip
 {
-    public class SalgMasterDetailsViewModel
+    public class SalgMasterDetailsViewModel : MasterDetailsViewModelBase<Salg>
     {
-        private SalgItemViewModel _salgItemViewModelSelected;
-        private SalgMasterViewModel _salgMasterViewModel;
-
-
-
-        public SalgMasterDetailsViewModel()
+        public SalgMasterDetailsViewModel() : base(new ViewModelFactorySalg(), SalgKatalog.Instance)
         {
-            _salgMasterViewModel = new SalgMasterViewModel();
-
-
-
-        }
-
-        public List<SalgItemViewModel> GetSalgItemviewmodelCollection
-        {
-            get { return _salgMasterViewModel.GetSalgItemviewmodelCollection(SalgKatalog.Instance); }
-        }
-
-        public SalgItemViewModel SalgItemViewModelSelected
-        {
-            get { return _salgItemViewModelSelected; }
-            set
-            {
-                _salgItemViewModelSelected = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-
-
-
-
-
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            List<string> fixedProperties = new List<string>();
+            fixedProperties.Add(nameof(Salg.ID));
+            
+            List<string> nonFixedKeyProperties = new List<string>();
+            nonFixedKeyProperties.Add(nameof(Salg.GetName));
+            nonFixedKeyProperties.Add(nameof(Salg.Price));
         }
     }
 }
