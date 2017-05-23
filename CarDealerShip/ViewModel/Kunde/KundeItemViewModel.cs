@@ -20,17 +20,13 @@ namespace CarDealerShip
 
         public KundeItemViewModel(Kunde obj) : base(obj)
         {
-            get { return _domainobject.Email; }
-            set { _domainobject.Email = value; }
+            
             
         }
 
-        public long Telefon
-        {
-            get { return _domainobject.TelefonNummer; }
-            set { _domainobject.TelefonNummer = value; }
+       
             
-        }
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -5,11 +5,10 @@
     xmlns:local="using:CarDealerShip"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:viewModel="using:CarDealerShip.ViewModel"
     mc:Ignorable="d">
 
     <Page.DataContext>
-        <viewModel:KundeMasterDetailsViewModel/> 
+        <local:KundeMasterDetailsViewModel/>
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
