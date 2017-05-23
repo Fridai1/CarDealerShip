@@ -93,6 +93,7 @@
     <None Include="project.json" />
     <Compile Include="AppConfig.cs" />
     <Compile Include="ViewModelFactory.cs" />
+    <Compile Include="ViewModel\Salg\ViewModelFactorySalg.cs" />
     <Compile Include="ViewModel\Base\CatalogBase.cs" />
     <Compile Include="ViewModel\Base\CollectionBase.cs" />
     <Compile Include="ViewModel\Base\DomainClassBase.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="ViewModel\Controllers\DeleteControllerBase.cs" />
     <Compile Include="ViewModel\Controllers\UpdateControllerBase.cs" />
     <Compile Include="ViewModel\Controllers\ViewControlState.cs" />
+    <Compile Include="ViewModel\Salg\SalgDetailsViewModel.cs" />
     <Compile Include="ViewModel\Salg\SalgMasterDetailsViewModel.cs" />
     <Compile Include="ViewModel\Salg\SalgMasterViewModel.cs" />
     <Compile Include="ViewModel\Salg\SalgItemViewModel.cs" />
