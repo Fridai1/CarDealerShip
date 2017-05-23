@@ -1,30 +1,24 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using CarDealerShip.Annotations;
+using CarDealerShip.ViewModel.Base;
 
-namespace CarDealerShip.ViewModel
+namespace CarDealerShip
 {
-    public class KundeItemViewModel : INotifyPropertyChanged
+    public class KundeItemViewModel : ItemViewModelBase<Kunde>
     {
-        private Kunde _domainobject;
 
-        public KundeItemViewModel(Kunde k)
+        public override string Description
         {
-            _domainobject = k;
+            get { return DomainObject.Navn + DomainObject.Addresse + DomainObject.Email + DomainObject.TelefonNummer; }
         }
 
-        public string Navn
+        public override int FontSize
         {
-            get { return _domainobject.Navn; }  
-            set { _domainobject.Navn = value; }
+            get { return 24; }
         }
 
-        public string Adresse
-        {
-            get { return _domainobject.Addresse; }
-            set { _domainobject.Addresse = value; }
-        }
-
-        public string Email
+        public KundeItemViewModel(Kunde obj) : base(obj)
         {
             get { return _domainobject.Email; }
             set { _domainobject.Email = value; }
