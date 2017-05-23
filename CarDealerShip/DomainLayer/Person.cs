@@ -40,13 +40,13 @@ namespace CarDealerShip
 
         
 
-        public Person(string Navn, string Addresse, string Email, long TelefonNummer) //kunde kon
-        {
-            _navn = Navn;
-            _addresse = Addresse;
-            _email = Email;
-            _telofonNummer = TelefonNummer;
-        }
+        //public Person(string Navn, string Addresse, string Email, long TelefonNummer) //kunde kon
+        //{
+        //    _navn = Navn;
+        //    _addresse = Addresse;
+        //    _email = Email;
+        //    _telofonNummer = TelefonNummer;
+        //}
 
         public virtual Person Clone()
         {

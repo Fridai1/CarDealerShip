@@ -38,12 +38,6 @@ namespace CarDealerShip.ViewModel
             
         }
 
-        public void submit()
-        {
-            KundeKatalog.Instance.OpretKunde(new Kunde(_domainobject.Navn, _domainobject.Addresse, _domainobject.Email, _domainobject.TelefonNummer));
-        }
-
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         

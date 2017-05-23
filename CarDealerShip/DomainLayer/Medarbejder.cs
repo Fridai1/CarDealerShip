@@ -23,10 +23,10 @@ namespace CarDealerShip
             set { _password = value; }
         }
 
-        public Medarbejder (string Navn, string Password, string adresse, long TelefonNummer, string Email) : base(Navn, Email, adresse, TelefonNummer)
+        public Medarbejder () : base()
         {
             _id = IdGenerator.GenerateIdChef();
-            _password = Password; 
+             
         }
 
         public bool ValidatePassword(string Password) //tjekker om Password parameter er lig med instans værdien

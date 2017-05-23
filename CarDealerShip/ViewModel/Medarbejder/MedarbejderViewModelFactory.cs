@@ -23,7 +23,7 @@ namespace CarDealerShip.ViewModel.Medarbejder
 
         public override MasterViewModelBase<CarDealerShip.Medarbejder> CreateMasterViewModel()
         {
-            return new MedarbejderMasterDetailsViewModel();
+            return new MedarbejderMasterViewModel();
         }
     }
 }

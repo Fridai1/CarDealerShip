@@ -8,34 +8,28 @@ namespace CarDealerShip.ViewModel.Medarbejder
 {
     public class MedarbejderMasterDetailsViewModel : MasterDetailsViewModelBase<CarDealerShip.Medarbejder>
     {
-        public MedarbejderMasterDetailsViewModel() : base(new MedarbejderViewModelFactory(),
-            MedarbejderKatalog.Instance)
-        {
-            public MedarbejderMasterDetailsViewModel() : base(new ViewModelFactory(), Medarbejderkatalog.Instance)
+        public MedarbejderMasterDetailsViewModel() : base(new MedarbejderViewModelFactory(), MedarbejderKatalog.Instance)
             {
                
                 List<string> fixedProperties = new List<string>();
                
-                fixedProperties.Add(nameof(Medarbejder.StelNr));
+                fixedProperties.Add(nameof(CarDealerShip.Medarbejder.Id));
 
                 List<string> nonFixedKeyProperties = new List<string>();
                 
-                nonFixedKeyProperties.Add(nameof(Bil.Farve));
-                nonFixedKeyProperties.Add(nameof(Bil.Fabrikant));
-                nonFixedKeyProperties.Add(nameof(Bil.Model));
-                nonFixedKeyProperties.Add(nameof(Bil.MotorStr));
-                nonFixedKeyProperties.Add(nameof(Bil.Price));
-                nonFixedKeyProperties.Add(nameof(Bil.Ny));
-                nonFixedKeyProperties.Add(nameof(Bil.Type));
+                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Navn));
+                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Addresse));
+                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Email));
+                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Id));
+                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Chef));
+
 
 
                 StateManager.AddFixedPropertiesDefaultStates(fixedProperties);
                 StateManager.AddNonFixedPropertiesDefaultStates(nonFixedKeyProperties);
                 StateManager.AddButtonDefaultStates();
-
-                //StateManager.AddViewControlState(new ViewControlState("ZipCodeFilter", "ZipCode below 3000"));
-                //StateManager.AddViewControlState(new ViewControlState("BornFilter", "Born after 1990"));
+            
             }
     }
-    }
+    
 }
