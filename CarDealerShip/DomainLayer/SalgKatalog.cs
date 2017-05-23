@@ -7,7 +7,7 @@ namespace CarDealerShip.DomainLayer
     {
 
         private static SalgKatalog _instance = null;
-        private Dictionary<int, Salg> _bilkatalog;
+        private Dictionary<int, Salg> _salgKatalog;
 
         public static SalgKatalog Instance
         {
@@ -21,54 +21,42 @@ namespace CarDealerShip.DomainLayer
 
         public SalgKatalog() : base(new CollectionBase<Salg>())
         {
-            _bilkatalog = new Dictionary<int, Salg>();
+            _salgKatalog = new Dictionary<int, Salg>();
 
         }
 
 
+        public double GetTotalSalg(int id)
+        {
+            int i = 0;
+            double value = 0;
 
+            while (i < _salgKatalog.Count)
+            {
+                if (_salgKatalog[i].ID == id)
+                {
+                    double plus = _salgKatalog[i].Price;
+                    value = plus + value;
+                }
+                i++;
+            }
+            return value;
+        }
 
-        //public  List<Salg> Salgs { get { return _salgKatalog.ToList(); } }
+        public int GetIdSalg(int id)
+        {
+            int i = 0;
 
-        //public  double GetTotalSalg(int id)
-        //{
-        //    int i = 0;
-        //    double value = 0;
+            while (i < _salgKatalog.Count)
+            {
+                if (_salgKatalog[i].ID == id)
+                {
+                    return _salgKatalog[i].ID;
+                }
+                i++;
+            }
+            return 0;
+        }
 
-        //    while (i < _salgKatalog.Count)
-        //    {
-        //        if (_salgKatalog[i].ID == id)
-        //        {
-        //            double plus = _salgKatalog[i].Price;
-        //            value = plus + value;
-        //        }
-        //        i++;
-        //    }
-        //    return value;
-        //}
-
-
-
-        //public int GetIdSalg(int id)
-        //{
-        //    int i = 0;
-
-        //    while (i < _salgKatalog.Count)
-        //    {
-        //        if (_salgKatalog[i].ID == id)
-        //        {
-        //            return _salgKatalog[i].ID;
-        //        }
-        //        i++;
-        //    }
-        //    return 0;
-        //}
-
-
-        //public  void OpretSalg(Salg salg)
-        //{
-        //    _salgKatalog.Add(salg);
-
-        //}
     }
 }
