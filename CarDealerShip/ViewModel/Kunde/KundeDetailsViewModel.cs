@@ -1,12 +1,10 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using CarDealerShip.ViewModel.Base;
+﻿using CarDealerShip.ViewModel.Base;
 
-namespace CarDealerShip
+namespace CarDealerShip.ViewModel.Kunde
 {
-    public class KundeDetailsViewModel : DetailsViewModelBase<Kunde>
+    public class KundeDetailsViewModel : DetailsViewModelBase<CarDealerShip.Kunde>
     {
-        public KundeDetailsViewModel(Kunde obj) : base(obj)
+        public KundeDetailsViewModel(CarDealerShip.Kunde obj) : base(obj)
         {
         }
 
