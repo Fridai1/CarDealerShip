@@ -44,7 +44,7 @@ namespace CarDealerShip
 
         private void opretNytSalg_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CarDealerShip.SaleVælgBilView));
+            this.Frame.Navigate(typeof(CarDealerShip.SaleView));
         }
 
         private void seProvision_Click(object sender, RoutedEventArgs e)

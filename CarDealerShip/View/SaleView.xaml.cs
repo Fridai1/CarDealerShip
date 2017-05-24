@@ -20,16 +20,16 @@ namespace CarDealerShip
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class OpretBilView : Page
+    public sealed partial class SaleView : Page
     {
-        public OpretBilView()
+        public SaleView()
         {
             this.InitializeComponent();
         }
 
-        private void backToMenuButton_Click(object sender, RoutedEventArgs e)
+        private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CarDealerShip.MainPage));
+
         }
     }
 }

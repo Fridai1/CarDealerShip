@@ -4,14 +4,14 @@
     {
         private double _price;
         private int _id;
-        private string _name;
+        private long _telefonNummer;
          
 
 
-        public string GetName //grunden til at der både er en get og set, er fordi at dette er en klasse for sig selv, og "bare" gemmer de informationer som den får fra de andre klasser.
+        public long getTLF //grunden til at der både er en get og set, er fordi at dette er en klasse for sig selv, og "bare" gemmer de informationer som den får fra de andre klasser.
         {
-            get { return _name; }
-            set { _name = value; }
+            get { return _telefonNummer; }
+            set { _telefonNummer = value; }
         }
 
         public double Price //samme som i name
@@ -28,7 +28,7 @@
 
         public override void SetDefaultValues() //dette er de værdier som en instance af klassen har angivet når den bliver angivet
         {
-            _name = "name";
+            _telefonNummer = 12345678;
             _id = 007;
             _price = 0;
         }
