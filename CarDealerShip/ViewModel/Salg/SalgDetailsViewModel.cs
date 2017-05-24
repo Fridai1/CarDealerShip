@@ -16,7 +16,7 @@ namespace CarDealerShip
             }
         }
 
-        public long Name
+        public long Telefon
         {
             get
             {

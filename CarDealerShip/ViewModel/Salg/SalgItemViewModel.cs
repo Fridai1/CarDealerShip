@@ -9,7 +9,7 @@ namespace CarDealerShip
 
         public override string Description
         {
-            get { return DomainObject.getTLF + " med ID " + DomainObject.ID + "has sold made a sale for: " + DomainObject.Price; }
+            get { return  "sælgeren med ID: " + DomainObject.ID + " har solgt en bil til kunde med tlf nr: " + DomainObject.getTLF + " for: " + DomainObject.Price + " kr." ; }
         }
 
         public override int FontSize
