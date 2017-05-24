@@ -16,11 +16,11 @@ namespace CarDealerShip
             }
         }
 
-        public string Name
+        public long Name
         {
             get
             {
-                return DomainObject.GetName;
+                return DomainObject.getTLF;
             }
         }
 
