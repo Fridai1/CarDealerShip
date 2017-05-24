@@ -3,53 +3,35 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using CarDealerShip.Annotations;
 using CarDealerShip.DomainLayer;
+using CarDealerShip.ViewModel;
 
 namespace CarDealerShip
 {
-    public class SalgMasterDetailsViewModel
+    public class SalgMasterDetailsViewModel : MasterDetailsViewModelBase<Salg>
     {
-        private SalgItemViewModel _salgItemViewModelSelected;
-        private SalgMasterViewModel _salgMasterViewModel;
-
-
-
-        public SalgMasterDetailsViewModel()
+        public SalgMasterDetailsViewModel() : base(new ViewModelFactorySalg(), SalgKatalog.Instance)
         {
-            _salgMasterViewModel = new SalgMasterViewModel();
-
-
-
+            List<string> fixedProperties = new List<string>();
+            fixedProperties.Add(nameof(Salg.ID));
+            
+            List<string> nonFixedKeyProperties = new List<string>();
+            nonFixedKeyProperties.Add(nameof(Salg.getTLF));
+            nonFixedKeyProperties.Add(nameof(Salg.Price));
         }
 
-        public List<SalgItemViewModel> GetSalgItemviewmodelCollection
+        public List<Bil> BilKatalog
         {
-            get { return _salgMasterViewModel.GetSalgItemviewmodelCollection(SalgKatalog.Instance); }
+            get {return CarDealerShip.BilKatalog.Instance.All; }
         }
 
-        public SalgItemViewModel SalgItemViewModelSelected
+        public List<Kunde> KundeKatalog
         {
-            get { return _salgItemViewModelSelected; }
-            set
-            {
-                _salgItemViewModelSelected = value;
-                OnPropertyChanged();
-            }
+            get { return CarDealerShip.KundeKatalog.Instance.All; }
         }
 
-
-
-
-
-
-
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        public List<Medarbejder> MedarbejderKatalog
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            get { return CarDealerShip.MedarbejderKatalog.Instance.All; }
         }
     }
 }

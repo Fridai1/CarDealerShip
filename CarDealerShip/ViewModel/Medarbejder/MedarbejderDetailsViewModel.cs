@@ -14,7 +14,7 @@ namespace CarDealerShip.ViewModel.Medarbejder
         {
         }
 
-        public string Stilling; // er ikke færdig
+        public string Stilling; // er ikke færdig boooo
 
         public string Navn
         {
@@ -22,10 +22,10 @@ namespace CarDealerShip.ViewModel.Medarbejder
             set { DomainObject.Navn = value; OnPropertyChanged();}
         }
 
-        public string Addresse
+        public string Adresse
         {
-            get { return DomainObject.Addresse; }
-            set { DomainObject.Addresse = value; OnPropertyChanged(); }
+            get { return DomainObject.Adresse; }
+            set { DomainObject.Adresse = value; OnPropertyChanged(); }
         }
 
         public long TelefonNummer

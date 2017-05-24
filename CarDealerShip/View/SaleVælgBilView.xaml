@@ -17,54 +17,66 @@
         </TextBlock>
         <TextBlock x:Name="TextBlockCopy" Margin="0,15,332,0" TextWrapping="Wrap" Text="Bil detaljer" FontSize="36" TextAlignment="Center" HorizontalAlignment="Right" Height="63" VerticalAlignment="Top" Width="292"/>
         <StackPanel Margin="10,98,0,10" Background="#FF858585" HorizontalAlignment="Left" Width="943" d:LayoutOverrides="TopPosition, BottomPosition">
-            <ListView x:Name="ListView" ItemsSource="{Binding BilItemViewModelCollection}" SelectedItem="{Binding BilItemViewModelSelected}" Background="White" BorderThickness="0" Margin="25,25,31,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887"/>
+            <ListView x:Name="ListView" ItemsSource="{Binding ItemViewModelCollection}" SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}" Visibility="{Binding ItemSelectorVisible}" IsEnabled="{Binding ItemSelectorEnabled}" Background="White" BorderThickness="0" Margin="25,25,25,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887"/>
         </StackPanel>
         <StackPanel Margin="0,98,10,10" Background="#FF858585" HorizontalAlignment="Right" Width="937" d:LayoutOverrides="TopPosition, BottomPosition">
-            <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
+            <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock1" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Stand af bil:"/>
-                <TextBox x:Name="textBox1_Copy" SelectedText="{Binding BilItemViewModelSelected.Stand}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="450" Margin="20">
+                    <ComboBoxItem x:Name="standAfBilNy" Content="NY" Height="100" Width="100"/>
+                    <ComboBoxItem x:Name="standAfBilBrugt" Content="BRUGT" Height="100" Width="100"/>
+                </ComboBox>
             </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
+            <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock3" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
-                    <Run Text="Type af bil:"/>
+                    <Run Text="Type af bil"/>
+                    <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox1_Copy1" SelectedText="{Binding BilItemViewModelSelected.Type}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <ComboBox x:Name="comboBox1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="450" Margin="20">
+                    <ComboBoxItem x:Name="typeBilRV" Content="RV" Height="100" Width="100"/>
+                    <ComboBoxItem x:Name="typeBilSport" Content="Sport" Height="100" Width="100"/>
+                    <ComboBoxItem x:Name="typeBilFamilie" Content="Familie" Height="100" Width="100"/>
+                </ComboBox>
             </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
+            <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock2" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Mærke:"/>
-                <TextBox x:Name="textBox1" SelectedText="{Binding BilItemViewModelSelected.Fabrikant}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox1" 
+                         
+                         IsEnabled="{Binding ViewControlStates[Fabrikant].Enabled}" Visibility="{Binding ViewControlStates[Fabrikant].VisibilityState}" Text="{Binding DetailsViewModel.Fabrikant, Mode=TwoWay}"  Margin="20" TextWrapping="Wrap"  Width="450" FontSize="24"/>
             </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
+            <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock4" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
-                    <Run Text="Model:"/>
+                    <Run Text="Model"/>
+                    <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox2" SelectedText="{Binding BilItemViewModelSelected.Model}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox2" IsEnabled="{Binding ViewControlStates[Model].Enabled}" Visibility="{Binding ViewControlStates[Model].VisibilityState}" Text="{Binding DetailsViewModel.Model, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
             </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
+            <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock5" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
-                    <Run Text="Farve:"/>
+                    <Run Text="Farve"/>
+                    <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox3" SelectedText="{Binding BilItemViewModelSelected.Farve}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox3" IsEnabled="{Binding ViewControlStates[Farve].Enabled}" Visibility="{Binding ViewControlStates[Farve].VisibilityState}" Text="{Binding DetailsViewModel.Farve, Mode=TwoWay}" Margin="20" TextWrapping="Wrap"  Width="450" FontSize="24"/>
             </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
+            <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock6" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Motorstørrelse"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox4" SelectedText="{Binding BilItemViewModelSelected.MotorStr}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox4" IsEnabled="{Binding ViewControlStates[MotorStr].Enabled}" Visibility="{Binding ViewControlStates[MotorStr].VisibilityState}" Text="{Binding DetailsViewModel.MotorStr, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
             </StackPanel>
-            <StackPanel Height="98" Orientation="Horizontal" Margin="0,0,-6,0">
+            <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock7" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Stel nummer"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox5" SelectedText="{Binding BilItemViewModelSelected.StelNr}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
-            </StackPanel>
-            <StackPanel Height="230" Margin="0,0,14,0" Orientation="Horizontal">
+                <TextBox x:Name="textBox5" IsEnabled="{Binding ViewControlStates[StelNr].Enabled}" Visibility="{Binding ViewControlStates[StelNr].VisibilityState}" Text="{Binding DetailsViewModel.StelNr, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
+                <StackPanel Height="230" Margin="0,0,14,0" Orientation="Horizontal">
                 <Button x:Name="SubmitButton" Content="Videre" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition"/>
                 <!--<Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" />-->
             </StackPanel>
         </StackPanel>
+       </StackPanel>
 
     </Grid>
 </Page>

@@ -8,7 +8,7 @@ namespace CarDealerShip
     {
         private double _Provision;
 
-       
+        private int _value;
         private int _id;
         private double _solgt;
         public Provision(int id)
@@ -18,33 +18,28 @@ namespace CarDealerShip
             
             _id = id;
             _solgt = SalgKatalog.Instance.GetTotalSalg(_id);
-
-
-
-
-
-
+            
         }
 
-        public void provision()
-        {
+        //public void provision()
+        //{
 
-            if (_solgt >= 1 || _solgt <= 99999)
-            {
-                _Provision = _solgt * 1.05 - _solgt;
-                //_value = 1;
-            }
-            else if (_solgt >= 100000 || _solgt < 200000)
-            {
-                //_value = 2;
-                _Provision = _solgt * 1.07 - _solgt;
-            }
-            else if (_solgt > 200000)
-            {
-                //_value = 3;
-                _Provision = _solgt * 1.10 - _solgt;
-            }
-        }
+        //    if (_solgt >= 1 || _solgt <= 99999)
+        //    {
+        //        _Provision = _solgt * 1.05 - _solgt;
+        //        _value = 1;
+        //    }
+        //    else if (_solgt >= 100000 || _solgt < 200000)
+        //    {
+        //        _value = 2;
+        //        _Provision = _solgt * 1.07 - _solgt;
+        //    }
+        //    else if (_solgt > 200000)
+        //    {
+        //        _value = 3;
+        //        _Provision = _solgt * 1.10 - _solgt;
+        //    }
+        //}
 
         public double GetProv
         {
@@ -68,7 +63,7 @@ namespace CarDealerShip
                 return _Provision;
             }
         }
-        //public double Getprovision => _Provision;
+        public double Getprovision => _Provision;
 
         public int getID
         {
@@ -82,7 +77,8 @@ namespace CarDealerShip
 
         //public double GetProvision
         //{
-        //    get {
+        //    get
+        //    {
         //        switch (_value)
         //        {
         //            case 1:
@@ -90,7 +86,7 @@ namespace CarDealerShip
         //                break;
 
         //            case 2:
-        //                 _Provision = _solgt * 1.05;
+        //                _Provision = _solgt * 1.05;
         //                break;
 
         //            case 3:

@@ -25,7 +25,7 @@
         <StackPanel Margin="10" Grid.Row="1" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Background="#FF858585">
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock1" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Stand af bil:"/>
-                <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="450" Margin="20">
+                <ComboBox x:Name="comboBox" SelectedItem="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="450" Margin="20">
                     <ComboBoxItem x:Name="standAfBilNy" Content="NY" Height="100" Width="100"/>
                     <ComboBoxItem x:Name="standAfBilBrugt" Content="BRUGT" Height="100" Width="100"/>
                 </ComboBox>
@@ -78,15 +78,17 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock 
                     Width="414" FontSize="24"         Text="Photo ID"/>
-                <!--<TextBox
-                    IsEnabled="{Binding ViewControlStates[PhotoID].Enabled}"
-                    Visibility="{Binding ViewControlStates[PhotoID].VisibilityState}"
-                         Text="{Binding DetailsViewModel.PhotoID, Mode=TwoWay}" />-->
+                <TextBox
+                    
+                         Text="{Binding DetailsViewModel.PhotoID, Mode=TwoWay}" />
             </StackPanel>
+            
+            
+            
             
 
             <StackPanel Height="230" Margin="10,0" Orientation="Horizontal">
-                <!--<Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2"/>-->
+                <Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" Click="backToMenuButton_Click"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Margin="10" Grid.Row="1" Background="#FF858585" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Grid.Column="1">
@@ -101,8 +103,14 @@
                             <StackPanel>
                                 <StackPanel Margin="10,10,10,10">
                                     <TextBlock FontSize="24" Text="{Binding Description}"/>
-                                    <!--<TextBlock FontSize="24" Text="{Binding Type}"/>
-                                    <TextBlock FontSize="24" Text="{Binding Fabrikant}"/>
+                                    <Image Name="image"
+                                           Source="{Binding ImageSource}"
+                                           Visibility="{Binding ImageVisibility}"
+                                           HorizontalAlignment="Center"
+                                           Width="{Binding ImageSize}"
+                                           Height="{Binding ImageSize}"
+                                           Margin="5,5,5,5" />
+                                    <!--<TextBlock FontSize="24" Text="{Binding Fabrikant}"/>
                                     <TextBlock FontSize="24" Text="{Binding Model}"/>
                                     <TextBlock FontSize="24" Text="{Binding Farve}"/>
                                     <TextBlock FontSize="24" Text="{Binding MotorStr}"/>

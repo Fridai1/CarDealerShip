@@ -7,50 +7,50 @@ using CarDealerShip.DomainLayer;
 
 namespace CarDealerShip
 {
-    public class ProvisionMasterDetailsViewModel : INotifyPropertyChanged
-    {
-        private ProvisionItemViewModel _provisionitemViewModelSelected;
-        private ProvisionMasterViewModel _ProvisionMasterViewModel;
+    //public class ProvisionMasterDetailsViewModel : INotifyPropertyChanged
+    //{
+    //    private ProvisionItemViewModel _provisionitemViewModelSelected;
+    //    private ProvisionMasterViewModel _ProvisionMasterViewModel;
         
         
 
-        public ProvisionMasterDetailsViewModel()
-        {
-            _ProvisionMasterViewModel = new ProvisionMasterViewModel();
+    //    public ProvisionMasterDetailsViewModel()
+    //    {
+    //        _ProvisionMasterViewModel = new ProvisionMasterViewModel();
            
           
 
-        }
+    //    }
 
-        public List<ProvisionItemViewModel> ProvisionItemViewModelCollection
-        {
-            get { return _ProvisionMasterViewModel.GetProvisionitemviewmodelCollection(SalgKatalog.Instance); }
-        }
+    //    public List<ProvisionItemViewModel> ProvisionItemViewModelCollection
+    //    {
+    //        get { return _ProvisionMasterViewModel.GetProvisionitemviewmodelCollection(SalgKatalog.Instance); }
+    //    }
 
-        public ProvisionItemViewModel ProvisionItemViewModelSelected
-        {
-            get { return _provisionitemViewModelSelected; }
-            set
-            {
-                _provisionitemViewModelSelected = value; 
-                OnPropertyChanged();
-            }
-        }
-
-        
+    //    public ProvisionItemViewModel ProvisionItemViewModelSelected
+    //    {
+    //        get { return _provisionitemViewModelSelected; }
+    //        set
+    //        {
+    //            _provisionitemViewModelSelected = value; 
+    //            OnPropertyChanged();
+    //        }
+    //    }
 
         
 
+        
 
 
 
 
-        public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
+    //    public event PropertyChangedEventHandler PropertyChanged;
+
+    //    [NotifyPropertyChangedInvocator]
+    //    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    //    {
+    //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    //    }
+    //}
 }

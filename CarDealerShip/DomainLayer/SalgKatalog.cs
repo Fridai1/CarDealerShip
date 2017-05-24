@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace CarDealerShip.DomainLayer
 {
-    public class SalgKatalog
+    public class SalgKatalog : CatalogBase<Salg>
     {
 
         private static SalgKatalog _instance = null;
-        private List<Salg> _salgKatalog;
+        private Dictionary<int, Salg> _salgKatalog;
 
         public static SalgKatalog Instance
         {
@@ -19,17 +19,14 @@ namespace CarDealerShip.DomainLayer
             }
         }
 
-        public SalgKatalog()
+        public SalgKatalog() : base(new CollectionBase<Salg>())
         {
-            _salgKatalog = new List<Salg>();
+            _salgKatalog = new Dictionary<int, Salg>();
+
         }
-        
 
-       
 
-        public  List<Salg> Salgs { get { return _salgKatalog.ToList(); } }
-
-        public  double GetTotalSalg(int id)
+        public double GetTotalSalg(int id)
         {
             int i = 0;
             double value = 0;
@@ -46,8 +43,6 @@ namespace CarDealerShip.DomainLayer
             return value;
         }
 
-
-
         public int GetIdSalg(int id)
         {
             int i = 0;
@@ -63,11 +58,5 @@ namespace CarDealerShip.DomainLayer
             return 0;
         }
 
-
-        public  void OpretSalg(Salg salg)
-        {
-            _salgKatalog.Add(salg);
-
-        }
     }
 }

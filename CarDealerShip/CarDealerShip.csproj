@@ -92,7 +92,12 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="project.json" />
     <Compile Include="AppConfig.cs" />
+    <Compile Include="View\SaleView.xaml.cs">
+      <DependentUpon>SaleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Salg\SalgDetailsViewModel.cs" />
     <Compile Include="ViewModelFactory.cs" />
+    <Compile Include="ViewModel\Salg\ViewModelFactorySalg.cs" />
     <Compile Include="ViewModel\Base\CatalogBase.cs" />
     <Compile Include="ViewModel\Base\CollectionBase.cs" />
     <Compile Include="ViewModel\Base\DomainClassBase.cs" />
@@ -181,6 +186,7 @@
     <None Include="CarDealerShip_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Domain\Bil\02.JPG" />
     <Content Include="Assets\Domain\Bil\bmw.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -199,6 +205,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SaleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ProvisionView.xaml">
       <SubType>Designer</SubType>

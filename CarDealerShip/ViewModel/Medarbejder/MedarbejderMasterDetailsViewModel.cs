@@ -18,14 +18,14 @@ namespace CarDealerShip.ViewModel.Medarbejder
                 List<string> nonFixedKeyProperties = new List<string>();
                 
                 nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Navn));
-                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Addresse));
+                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Adresse));
                 nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Email));
-                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Id));
-                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Chef));
+                nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.TelefonNummer));
+            //nonFixedKeyProperties.Add(nameof(CarDealerShip.Medarbejder.Chef));
 
 
 
-                StateManager.AddFixedPropertiesDefaultStates(fixedProperties);
+            StateManager.AddFixedPropertiesDefaultStates(fixedProperties);
                 StateManager.AddNonFixedPropertiesDefaultStates(nonFixedKeyProperties);
                 StateManager.AddButtonDefaultStates();
             

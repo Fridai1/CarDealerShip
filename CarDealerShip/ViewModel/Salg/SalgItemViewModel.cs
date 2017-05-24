@@ -1,34 +1,25 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using CarDealerShip.ViewModel.Base;
 
 namespace CarDealerShip
 {
-    public class SalgItemViewModel : INotifyPropertyChanged
+    public class SalgItemViewModel : ItemViewModelBase<Salg>
     {
-        private Salg _domainobject;
 
-        public SalgItemViewModel(Salg s)
+        public override string Description
         {
-            _domainobject = s;
+            get { return  "sælgeren med ID: " + DomainObject.ID + " har solgt en bil til kunde med tlf nr: " + DomainObject.getTLF + " for: " + DomainObject.Price + " kr." ; }
         }
 
-        public int ID
+        public override int FontSize
         {
-            get { return _domainobject.ID; }
+            get { return 24; }
         }
 
-        public double Price
+        public SalgItemViewModel(Salg obj) : base(obj)
         {
-            get { return _domainobject.Price; }
-        }
-
-       
-        public event PropertyChangedEventHandler PropertyChanged;
-
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
+
 }

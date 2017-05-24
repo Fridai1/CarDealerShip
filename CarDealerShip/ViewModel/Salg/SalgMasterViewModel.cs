@@ -1,22 +1,12 @@
 ﻿using System.Collections.Generic;
 using CarDealerShip.DomainLayer;
+using CarDealerShip.ViewModel.Base;
 
 namespace CarDealerShip
 {
-    public class SalgMasterViewModel
+    public class SalgMasterViewModel : MasterViewModelBase<Salg>
     {
-        public List<SalgItemViewModel> GetSalgItemviewmodelCollection(SalgKatalog katalog)
-        {
-            List<SalgItemViewModel> items = new List<SalgItemViewModel>();
-
-            foreach (Salg s in katalog.Salgs)
-            {
-                items.Add(new SalgItemViewModel(s));
-            }
-            return items;
-        }
-
-        public SalgMasterViewModel()
+       public SalgMasterViewModel()
         {
 
         }
