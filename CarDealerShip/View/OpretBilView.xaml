@@ -88,7 +88,7 @@
             
 
             <StackPanel Height="230" Margin="10,0" Orientation="Horizontal">
-                <!--<Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2"/>-->
+                <Button x:Name="backToMenuButton" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" Click="backToMenuButton_Click"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Margin="10" Grid.Row="1" Background="#FF858585" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Grid.Column="1">

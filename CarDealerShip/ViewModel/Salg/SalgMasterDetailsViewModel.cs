@@ -15,8 +15,23 @@ namespace CarDealerShip
             fixedProperties.Add(nameof(Salg.ID));
             
             List<string> nonFixedKeyProperties = new List<string>();
-            nonFixedKeyProperties.Add(nameof(Salg.GetName));
+            nonFixedKeyProperties.Add(nameof(Salg.getTLF));
             nonFixedKeyProperties.Add(nameof(Salg.Price));
+        }
+
+        public List<Bil> BilKatalog
+        {
+            get {return CarDealerShip.BilKatalog.Instance.All; }
+        }
+
+        public List<Kunde> KundeKatalog
+        {
+            get { return CarDealerShip.KundeKatalog.Instance.All; }
+        }
+
+        public List<Medarbejder> MedarbejderKatalog
+        {
+            get { return CarDealerShip.MedarbejderKatalog.Instance.All; }
         }
     }
 }

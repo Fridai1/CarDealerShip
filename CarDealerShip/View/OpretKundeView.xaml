@@ -24,35 +24,112 @@
         <StackPanel Margin="10,98,0,10" Background="#FF858585" HorizontalAlignment="Left" Width="943" d:LayoutOverrides="TopPosition, BottomPosition">
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock4" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Navn:"/>
-                <TextBox x:Name="textBox2" SelectedText="{Binding KundeItemViewModelSelected.Navn, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox2" IsEnabled="{Binding ViewControlStates[Navn].Enabled}" Visibility="{Binding ViewControlStates[Navn].VisibilityState}" Text="{Binding DetailsViewModel.Navn, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock5" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Adresse"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox3" SelectedText="{Binding KundeItemViewModelSelected.Adresse, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox3" IsEnabled="{Binding ViewControlStates[Adresse].Enabled}" Visibility="{Binding ViewControlStates[Adresse].VisibilityState}" Text="{Binding DetailsViewModel.Adresse, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock6" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Telefon nr"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox4" SelectedText="{Binding KundeItemViewModelSelected.Telefon, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox4" IsEnabled="{Binding ViewControlStates[Telefon].Enabled}" Visibility="{Binding ViewControlStates[Telefon].VisibilityState}" Text="{Binding DetailsViewModel.Telefonnummer, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock7" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right">
                     <Run Text="Email"/>
                     <Run Text=":"/>
                 </TextBlock>
-                <TextBox x:Name="textBox5" SelectedText="{Binding KundeItemViewModelSelected.Email, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Text="" Width="450" FontSize="24"/>
+                <TextBox x:Name="textBox5" IsEnabled="{Binding ViewControlStates[Email].Enabled}" Visibility="{Binding ViewControlStates[Email].VisibilityState}" Text="{Binding DetailsViewModel.Email, Mode=TwoWay}" Margin="20" TextWrapping="Wrap" Width="450" FontSize="24"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock 
+                    Width="414" FontSize="24"         Text="Photo ID"/>
+                <TextBox
+                         Text="{Binding DetailsViewModel.PhotoID, Mode=TwoWay}" />
+
+            </StackPanel>
+
+
+
+        </StackPanel>
+        <StackPanel  Margin="0,98,0,10" Background="#FF858585" HorizontalAlignment="Right" Width="937">
+            <ListView
+                x:Name="listView" ItemsSource="{Binding ItemViewModelCollection}" 
+                SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}"
+                Visibility="{Binding ItemSelectorVisible}"
+                IsEnabled="{Binding ItemSelectorEnabled}" Background="Lavender" Height="192" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <StackPanel>
+                                <StackPanel Margin="10,10,10,10">
+                                    <TextBlock FontSize="24" Text="{Binding Description}"/>
+                                    <Image Name="image"
+                                           Source="{Binding ImageSource}"
+                                           Visibility="{Binding ImageVisibility}"
+                                           HorizontalAlignment="Center"
+                                           Width="{Binding ImageSize}"
+                                           Height="{Binding ImageSize}"
+                                           Margin="5,5,5,5" />
+                                    <TextBlock FontSize="24" Text="{Binding Navn}"/>
+                                    <TextBlock FontSize="24" Text="{Binding Adresse}"/>
+                                    <TextBlock FontSize="24" Text="{Binding Email}"/>
+                                    <TextBlock FontSize="24" Text="{Binding Telefon}"/>
+                                    
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <StackPanel
+                        Orientation="Horizontal" BorderBrush="Black" BorderThickness="2,2,2,0">
+
+                <!--Create button-->
+                <Button Content="Create" 
+                        IsEnabled="{Binding ViewControlStates[Create].Enabled}"
+                        Visibility="{Binding ViewControlStates[Create].VisibilityState}"
+                        Command="{Binding CreateCommand}"/>
+                
+                <!--Update button-->
+                <Button Content="Update" 
+                        IsEnabled="{Binding ViewControlStates[Update].Enabled}"
+                        Visibility="{Binding ViewControlStates[Update].VisibilityState}"
+                        Command="{Binding UpdateCommand}"/>
+                <!--Delete button-->
+                <Button Content="Delete" 
+                        IsEnabled="{Binding ViewControlStates[Delete].Enabled}"
+                        Visibility="{Binding ViewControlStates[Delete].VisibilityState}"
+                        Command="{Binding DeleteCommand}"/>
+
+
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" BorderBrush="Black" BorderThickness="2">
+
+                <RadioButton Content="Create" 
+                             Command="{Binding SelectCreateCommand}"/>
+                <RadioButton Content="Update" 
+                             Command="{Binding SelectUpdateCommand}"/>
+
+                <RadioButton Content="Delete" 
+                             Command="{Binding SelectDeleteCommand}"/>
+
+                <RadioButton Content="Read"  IsChecked="True" 
+                             Command="{Binding SelectReadCommand}"/>
+
             </StackPanel>
         </StackPanel>
-        <StackPanel Margin="0,98,10,10" Background="#FF858585" HorizontalAlignment="Right" Width="937" d:LayoutOverrides="TopPosition, BottomPosition">
-            <ListView x:Name="listView" Background="White" BorderThickness="0" Margin="20,25" Height="925" HorizontalAlignment="Center" VerticalAlignment="Center" Width="887"/>
-        </StackPanel>
+
         <StackPanel Height="230" Margin="10,0,0,164" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="923">
-            <Button x:Name="submitButton" Command="{Binding OpretCommand}" Content="Submit" HorizontalAlignment="Stretch" Height="75" Margin="125,50,0,0" VerticalAlignment="Stretch" Width="250" FontSize="36" d:LayoutOverrides="TopPosition, BottomPosition" Click="submitButton_Click"/>
+
             <Button x:Name="backToMenuButton" Command="{Binding ElementName=backToMenuButton }" Content="Back to Menu" HorizontalAlignment="Stretch" Height="75" Margin="180,50,350,0" VerticalAlignment="Stretch" Width="250" FontSize="36" BorderThickness="2,2,2,2" Click="backToMenuButton_Click"/>
         </StackPanel>
 
