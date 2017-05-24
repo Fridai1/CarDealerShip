@@ -10,7 +10,7 @@ namespace CarDealerShip
     {
         private string _farve;
         private long _stelNr;
-        private bool _ny;
+        private string _stand;
         private double _motorStr;
         private string _type;
         private double _price;
@@ -42,10 +42,10 @@ namespace CarDealerShip
             set { _stelNr = value; }
         }
 
-        public bool Ny
+        public string Stand
         {
-            get { return _ny; }
-            set { _ny = value; }
+            get { return _stand; }
+            set { _stand = value; }
         }
 
         public double MotorStr
@@ -86,14 +86,14 @@ namespace CarDealerShip
 
         public string ImageSource
         {
-            get { return AppConfig.ImageFilePrefix + "Bil\\" + PhotoID + AppConfig.ImageFilePostfix; }
+            get { return AppConfig.ImageFilePrefix + "Domain\\Bil\\" + PhotoID + AppConfig.ImageFilePostfix; }
         }
 
         public override void SetDefaultValues()
         {
             _farve = "sort";
             _stelNr = 99999999;
-            _ny = true;
+            _stand = "Ny";
             _motorStr = 2.0;
             _type = "station car";
             _price = 99999;

@@ -25,9 +25,9 @@
         <StackPanel Margin="10" Grid.Row="1" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Background="#FF858585">
             <StackPanel Height="98" Orientation="Horizontal">
                 <TextBlock x:Name="textBlock1" Margin="20" TextWrapping="Wrap" Width="414" FontSize="24" TextAlignment="Right" Text="Stand af bil:"/>
-                <ComboBox x:Name="comboBox" SelectedItem="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="450" Margin="20">
-                    <ComboBoxItem x:Name="standAfBilNy" Content="NY" Height="100" Width="100"/>
-                    <ComboBoxItem x:Name="standAfBilBrugt" Content="BRUGT" Height="100" Width="100"/>
+                <ComboBox x:Name="comboBox" SelectedIndex="{}" SelectedItem="{Binding DetailsViewModel.StandSelected , Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="450" Margin="20">
+                    <ComboBoxItem x:Name="Ny" Content="NY" Height="100" Width="100"/>
+                    <ComboBoxItem x:Name="Brugt" Content="BRUGT" Height="100" Width="100"/>
                 </ComboBox>
             </StackPanel>
             <StackPanel Height="98" Orientation="Horizontal">
