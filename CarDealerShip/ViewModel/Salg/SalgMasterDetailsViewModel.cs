@@ -17,6 +17,7 @@ namespace CarDealerShip
             List<string> nonFixedKeyProperties = new List<string>();
             nonFixedKeyProperties.Add(nameof(Salg.getTLF));
             nonFixedKeyProperties.Add(nameof(Salg.Price));
+            nonFixedKeyProperties.Add(nameof(Salg.getStelnummer));
         }
 
         public List<Bil> BilKatalog

@@ -5,6 +5,7 @@
         private double _price;
         private int _id;
         private long _telefonNummer;
+        private long _stelNummer;
          
 
 
@@ -26,11 +27,18 @@
             set { _price = value; }
         }
 
+        public long getStelnummer
+        {
+            get { return _stelNummer; }
+            set { _stelNummer = value; }
+        }
+
         public override void SetDefaultValues() //dette er de værdier som en instance af klassen har angivet når den bliver angivet
         {
             _telefonNummer = 12345678;
             _id = 007;
             _price = 0;
+            _stelNummer = 1234;
         }
     }
 }
