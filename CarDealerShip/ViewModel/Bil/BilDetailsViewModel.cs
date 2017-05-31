@@ -10,29 +10,10 @@ namespace CarDealerShip
         }
         public string Stand
             {
-                set
-                {
-                    if (value == "Ny")
-                    {
-                        DomainObject.Ny = true;
-                    }
-                    else
-                    {
-                        DomainObject.Ny = false;
-                    }
-                    OnPropertyChanged();
-            }
-                get
-                {
-                    if (DomainObject.Ny)
-                    {
-                        return "Ny";
-                    }
-                    else
-                    {
-                        return "brugt";
-                    }
-                }
+            set { DomainObject.Stand = value; }
+
+            get { return DomainObject.Stand; }
+                
             }
 
             public string Type

@@ -32,9 +32,12 @@ namespace CarDealerShip
             nonFixedKeyProperties.Add(nameof(Bil.Model));
             nonFixedKeyProperties.Add(nameof(Bil.MotorStr));
             nonFixedKeyProperties.Add(nameof(Bil.Price));
-            nonFixedKeyProperties.Add(nameof(Bil.Ny));
+            nonFixedKeyProperties.Add(nameof(Bil.Stand));
             nonFixedKeyProperties.Add(nameof(Bil.Type));
-           
+            nonFixedKeyProperties.Add(nameof(Bil.PhotoID));
+            nonFixedKeyProperties.Add(nameof(Bil.ImageSource));
+            
+
 
             StateManager.AddFixedPropertiesDefaultStates(fixedProperties);
             StateManager.AddNonFixedPropertiesDefaultStates(nonFixedKeyProperties);
