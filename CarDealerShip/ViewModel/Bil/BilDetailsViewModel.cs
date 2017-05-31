@@ -1,12 +1,14 @@
-﻿using CarDealerShip.ViewModel.Base;
+﻿using Windows.UI.Xaml.Controls;
+using CarDealerShip.ViewModel.Base;
 
 namespace CarDealerShip
 {
     public class BilDetailsViewModel : DetailsViewModelBase<Bil>
     {
-
+        private ComboBoxItem _standSelected;
         public BilDetailsViewModel(Bil obj) : base(obj)
         {
+
         }
         public string Stand
             {
@@ -94,6 +96,24 @@ namespace CarDealerShip
                     return DomainObject.Fabrikant;
                 }
             }
+
+        public ComboBoxItem StandSelected
+        {
+            get { return _standSelected; }
+            
+            set
+            {
+                DomainObject.Stand = value.ToString();
+                _standSelected = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Stand
+        {
+            get { return DomainObject.Stand; }
+            
+        }
 
             
         }

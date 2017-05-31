@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.AppExtensions;
 
 namespace CarDealerShip 
 {
@@ -13,6 +14,7 @@ namespace CarDealerShip
         private string _adresse;
         private string _email;
         private long _telofonNummer;
+        private string _photoID;
 
         public string Navn  
         {
@@ -38,6 +40,17 @@ namespace CarDealerShip
             set { _telofonNummer = value; }
         }
 
+        public string PhotoID
+        {
+            get { return _photoID; }
+            set { _photoID = value; }
+        }
+
+        public string ImageSource
+        {
+            get { return AppConfig.ImageFilePrefix + "Domain\\Person\\" + PhotoID + AppConfig.ImageFilePostfix; }
+        }
+
         
 
         //public Person(string Navn, string Addresse, string Email, long TelefonNummer) //kunde kon
@@ -56,6 +69,7 @@ namespace CarDealerShip
             _adresse = "Adresse";
             _email = "Email";
             _telofonNummer = 12345678;
+            _photoID = "Photo";
         }
     }
 }

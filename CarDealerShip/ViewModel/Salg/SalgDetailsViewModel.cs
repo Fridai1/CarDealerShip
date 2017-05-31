@@ -16,11 +16,11 @@ namespace CarDealerShip
             }
         }
 
-        public string Name
+        public long Telefon
         {
             get
             {
-                return DomainObject.GetName;
+                return DomainObject.getTLF;
             }
         }
 

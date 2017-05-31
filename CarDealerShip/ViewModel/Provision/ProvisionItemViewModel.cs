@@ -25,7 +25,7 @@ namespace CarDealerShip
 
         
 
-        public string GetNavn { get { return _domainobject.GetName; } }
+        public long getTLF { get { return _domainobject.getTLF; } }
 
        
 
